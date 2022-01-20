@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>拯救你的年底KPI：前端性能优化 | 派大星</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://pan.zealsay.com/blog/favicon.ico">
+    <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b0aae218897fa9d8a9f76e9a77e0b3c6";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="追逐目标的人">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.66b259ef.css" as="style"><link rel="preload" href="/assets/js/app.dc354540.js" as="script"><link rel="preload" href="/assets/js/5.4a76941f.js" as="script"><link rel="preload" href="/assets/js/1.d393d5fa.js" as="script"><link rel="preload" href="/assets/js/99.13cebe9e.js" as="script"><link rel="prefetch" href="/assets/js/10.e46ede23.js"><link rel="prefetch" href="/assets/js/100.baa0f63c.js"><link rel="prefetch" href="/assets/js/101.86701951.js"><link rel="prefetch" href="/assets/js/102.b4190078.js"><link rel="prefetch" href="/assets/js/103.f1cf5887.js"><link rel="prefetch" href="/assets/js/104.a63bd1e2.js"><link rel="prefetch" href="/assets/js/105.4667c6b5.js"><link rel="prefetch" href="/assets/js/106.1c979c4e.js"><link rel="prefetch" href="/assets/js/107.bd8c4b0a.js"><link rel="prefetch" href="/assets/js/108.6dc8addb.js"><link rel="prefetch" href="/assets/js/109.1ad91853.js"><link rel="prefetch" href="/assets/js/11.8261ebdc.js"><link rel="prefetch" href="/assets/js/110.af89de8a.js"><link rel="prefetch" href="/assets/js/111.697aefaa.js"><link rel="prefetch" href="/assets/js/112.67c2d282.js"><link rel="prefetch" href="/assets/js/113.dab0f7c0.js"><link rel="prefetch" href="/assets/js/114.4f87f007.js"><link rel="prefetch" href="/assets/js/115.16f8855f.js"><link rel="prefetch" href="/assets/js/116.14168e53.js"><link rel="prefetch" href="/assets/js/117.6654267c.js"><link rel="prefetch" href="/assets/js/118.1ccf7f63.js"><link rel="prefetch" href="/assets/js/119.cda1ecfc.js"><link rel="prefetch" href="/assets/js/12.89243a8a.js"><link rel="prefetch" href="/assets/js/120.964abe12.js"><link rel="prefetch" href="/assets/js/121.447afeec.js"><link rel="prefetch" href="/assets/js/122.4400c66f.js"><link rel="prefetch" href="/assets/js/123.7333fbb5.js"><link rel="prefetch" href="/assets/js/124.4e1e5d83.js"><link rel="prefetch" href="/assets/js/125.84a815d2.js"><link rel="prefetch" href="/assets/js/126.f6953f7c.js"><link rel="prefetch" href="/assets/js/127.5cf7ab43.js"><link rel="prefetch" href="/assets/js/128.7e139c47.js"><link rel="prefetch" href="/assets/js/129.157b5231.js"><link rel="prefetch" href="/assets/js/13.78b93ffa.js"><link rel="prefetch" href="/assets/js/130.da81a8d0.js"><link rel="prefetch" href="/assets/js/131.952c499e.js"><link rel="prefetch" href="/assets/js/132.f24bd10f.js"><link rel="prefetch" href="/assets/js/133.49e32e51.js"><link rel="prefetch" href="/assets/js/134.711cfa6e.js"><link rel="prefetch" href="/assets/js/135.8aa19670.js"><link rel="prefetch" href="/assets/js/136.51e97ea8.js"><link rel="prefetch" href="/assets/js/137.20cce46f.js"><link rel="prefetch" href="/assets/js/138.9d95ccdf.js"><link rel="prefetch" href="/assets/js/139.fe1fe9aa.js"><link rel="prefetch" href="/assets/js/14.f2551251.js"><link rel="prefetch" href="/assets/js/140.807217a8.js"><link rel="prefetch" href="/assets/js/141.5fce4892.js"><link rel="prefetch" href="/assets/js/142.fd6252e0.js"><link rel="prefetch" href="/assets/js/143.2e475d5c.js"><link rel="prefetch" href="/assets/js/144.5160914c.js"><link rel="prefetch" href="/assets/js/145.7d323e96.js"><link rel="prefetch" href="/assets/js/146.1030207b.js"><link rel="prefetch" href="/assets/js/147.c2f71711.js"><link rel="prefetch" href="/assets/js/148.b69fc63e.js"><link rel="prefetch" href="/assets/js/149.1bb9d3d3.js"><link rel="prefetch" href="/assets/js/15.46207edd.js"><link rel="prefetch" href="/assets/js/150.d9aac19b.js"><link rel="prefetch" href="/assets/js/151.07a17ce0.js"><link rel="prefetch" href="/assets/js/152.73a68196.js"><link rel="prefetch" href="/assets/js/153.0d79b837.js"><link rel="prefetch" href="/assets/js/154.2cfe2073.js"><link rel="prefetch" href="/assets/js/155.32217503.js"><link rel="prefetch" href="/assets/js/156.201bb801.js"><link rel="prefetch" href="/assets/js/157.09298989.js"><link rel="prefetch" href="/assets/js/158.cb785f40.js"><link rel="prefetch" href="/assets/js/159.25706958.js"><link rel="prefetch" href="/assets/js/16.79012710.js"><link rel="prefetch" href="/assets/js/160.cc7f6b12.js"><link rel="prefetch" href="/assets/js/161.9a5d76e3.js"><link rel="prefetch" href="/assets/js/162.0be38a36.js"><link rel="prefetch" href="/assets/js/163.43e49338.js"><link rel="prefetch" href="/assets/js/164.d1029618.js"><link rel="prefetch" href="/assets/js/165.230c5023.js"><link rel="prefetch" href="/assets/js/166.91d35f5f.js"><link rel="prefetch" href="/assets/js/167.1ab59e5a.js"><link rel="prefetch" href="/assets/js/168.965d615e.js"><link rel="prefetch" href="/assets/js/169.087dc7b3.js"><link rel="prefetch" href="/assets/js/17.788583ce.js"><link rel="prefetch" href="/assets/js/170.1f51d0c2.js"><link rel="prefetch" href="/assets/js/171.4a94ca24.js"><link rel="prefetch" href="/assets/js/172.64467f96.js"><link rel="prefetch" href="/assets/js/173.1aafa815.js"><link rel="prefetch" href="/assets/js/174.d72e1d41.js"><link rel="prefetch" href="/assets/js/175.dbe588f1.js"><link rel="prefetch" href="/assets/js/176.b28e5a8b.js"><link rel="prefetch" href="/assets/js/177.e2ffcefe.js"><link rel="prefetch" href="/assets/js/178.2653dac4.js"><link rel="prefetch" href="/assets/js/179.3cf49903.js"><link rel="prefetch" href="/assets/js/18.84be972a.js"><link rel="prefetch" href="/assets/js/180.b0ad9005.js"><link rel="prefetch" href="/assets/js/181.0a38c35f.js"><link rel="prefetch" href="/assets/js/182.899b0187.js"><link rel="prefetch" href="/assets/js/183.b956ad20.js"><link rel="prefetch" href="/assets/js/184.44fa9ac6.js"><link rel="prefetch" href="/assets/js/185.976c2c60.js"><link rel="prefetch" href="/assets/js/186.5af784b4.js"><link rel="prefetch" href="/assets/js/187.989c86cc.js"><link rel="prefetch" href="/assets/js/188.f9bd43e2.js"><link rel="prefetch" href="/assets/js/189.c448c6d3.js"><link rel="prefetch" href="/assets/js/19.b63ddcf4.js"><link rel="prefetch" href="/assets/js/190.8cef9d97.js"><link rel="prefetch" href="/assets/js/191.f59632ce.js"><link rel="prefetch" href="/assets/js/192.d3c9b2a2.js"><link rel="prefetch" href="/assets/js/193.a85c48cc.js"><link rel="prefetch" href="/assets/js/194.14e12c98.js"><link rel="prefetch" href="/assets/js/195.2584a376.js"><link rel="prefetch" href="/assets/js/196.ce6d4ce0.js"><link rel="prefetch" href="/assets/js/197.1b6ec0e6.js"><link rel="prefetch" href="/assets/js/198.c4df111c.js"><link rel="prefetch" href="/assets/js/199.6c4027a9.js"><link rel="prefetch" href="/assets/js/20.658ac3f6.js"><link rel="prefetch" href="/assets/js/200.605d9505.js"><link rel="prefetch" href="/assets/js/201.7a4dde66.js"><link rel="prefetch" href="/assets/js/202.792310e0.js"><link rel="prefetch" href="/assets/js/203.9708b626.js"><link rel="prefetch" href="/assets/js/204.74b2cf23.js"><link rel="prefetch" href="/assets/js/205.41ecfc1d.js"><link rel="prefetch" href="/assets/js/206.1c18dadb.js"><link rel="prefetch" href="/assets/js/207.868a8965.js"><link rel="prefetch" href="/assets/js/208.1c55f2b1.js"><link rel="prefetch" href="/assets/js/209.a5988f51.js"><link rel="prefetch" href="/assets/js/21.7ec90894.js"><link rel="prefetch" href="/assets/js/210.e721f198.js"><link rel="prefetch" href="/assets/js/211.f1d32bc1.js"><link rel="prefetch" href="/assets/js/212.2782b9ad.js"><link rel="prefetch" href="/assets/js/213.314f78e0.js"><link rel="prefetch" href="/assets/js/214.c7afce7a.js"><link rel="prefetch" href="/assets/js/215.552a2114.js"><link rel="prefetch" href="/assets/js/216.c6ab8bac.js"><link rel="prefetch" href="/assets/js/217.be20c0ed.js"><link rel="prefetch" href="/assets/js/218.1fd92ca0.js"><link rel="prefetch" href="/assets/js/219.99a3f2aa.js"><link rel="prefetch" href="/assets/js/22.eb8c0ada.js"><link rel="prefetch" href="/assets/js/220.a74ae108.js"><link rel="prefetch" href="/assets/js/221.d1526b18.js"><link rel="prefetch" href="/assets/js/222.bc590c25.js"><link rel="prefetch" href="/assets/js/223.ec10b8d0.js"><link rel="prefetch" href="/assets/js/224.c0a4d5ea.js"><link rel="prefetch" href="/assets/js/225.1cf7511f.js"><link rel="prefetch" href="/assets/js/226.5e7078ba.js"><link rel="prefetch" href="/assets/js/227.ad91b5f7.js"><link rel="prefetch" href="/assets/js/228.6cfc93f5.js"><link rel="prefetch" href="/assets/js/229.c97c767a.js"><link rel="prefetch" href="/assets/js/23.a8943735.js"><link rel="prefetch" href="/assets/js/230.21b65feb.js"><link rel="prefetch" href="/assets/js/231.df72e780.js"><link rel="prefetch" href="/assets/js/232.493720f5.js"><link rel="prefetch" href="/assets/js/233.965fd9da.js"><link rel="prefetch" href="/assets/js/234.4345f0b0.js"><link rel="prefetch" href="/assets/js/235.8103bbb4.js"><link rel="prefetch" href="/assets/js/236.5ad07565.js"><link rel="prefetch" href="/assets/js/237.6127271d.js"><link rel="prefetch" href="/assets/js/238.7253f9b2.js"><link rel="prefetch" href="/assets/js/239.1f5383b7.js"><link rel="prefetch" href="/assets/js/24.b263a917.js"><link rel="prefetch" href="/assets/js/240.463e34f8.js"><link rel="prefetch" href="/assets/js/241.8a5fc2d2.js"><link rel="prefetch" href="/assets/js/242.2f36965d.js"><link rel="prefetch" href="/assets/js/243.a3a8572c.js"><link rel="prefetch" href="/assets/js/244.e0e626ce.js"><link rel="prefetch" href="/assets/js/245.f1dc0764.js"><link rel="prefetch" href="/assets/js/246.3c39b2fa.js"><link rel="prefetch" href="/assets/js/247.5802cfd8.js"><link rel="prefetch" href="/assets/js/248.ddef8464.js"><link rel="prefetch" href="/assets/js/249.6a4ef8ba.js"><link rel="prefetch" href="/assets/js/25.52e40195.js"><link rel="prefetch" href="/assets/js/250.15481e6f.js"><link rel="prefetch" href="/assets/js/251.a7220300.js"><link rel="prefetch" href="/assets/js/252.abcb0a89.js"><link rel="prefetch" href="/assets/js/253.bb12b283.js"><link rel="prefetch" href="/assets/js/254.1f5051aa.js"><link rel="prefetch" href="/assets/js/255.7869a245.js"><link rel="prefetch" href="/assets/js/256.21b9282f.js"><link rel="prefetch" href="/assets/js/257.90c0afe1.js"><link rel="prefetch" href="/assets/js/258.643020d0.js"><link rel="prefetch" href="/assets/js/259.5fe9ed6e.js"><link rel="prefetch" href="/assets/js/26.565c0ade.js"><link rel="prefetch" href="/assets/js/260.7eddc292.js"><link rel="prefetch" href="/assets/js/261.f321b0b1.js"><link rel="prefetch" href="/assets/js/262.8fbf5f36.js"><link rel="prefetch" href="/assets/js/263.f98b49da.js"><link rel="prefetch" href="/assets/js/264.e25cb29d.js"><link rel="prefetch" href="/assets/js/265.f89c5e00.js"><link rel="prefetch" href="/assets/js/266.34c45519.js"><link rel="prefetch" href="/assets/js/267.1793917f.js"><link rel="prefetch" href="/assets/js/268.0a2b7f57.js"><link rel="prefetch" href="/assets/js/269.a36eb714.js"><link rel="prefetch" href="/assets/js/27.7f50fe6a.js"><link rel="prefetch" href="/assets/js/270.8d8ec855.js"><link rel="prefetch" href="/assets/js/271.69ea5461.js"><link rel="prefetch" href="/assets/js/272.a88553e6.js"><link rel="prefetch" href="/assets/js/273.757eec12.js"><link rel="prefetch" href="/assets/js/274.5a3d8dbf.js"><link rel="prefetch" href="/assets/js/275.4aa2667f.js"><link rel="prefetch" href="/assets/js/276.06475254.js"><link rel="prefetch" href="/assets/js/277.9f54c560.js"><link rel="prefetch" href="/assets/js/278.49c48cb7.js"><link rel="prefetch" href="/assets/js/279.87469112.js"><link rel="prefetch" href="/assets/js/28.4f20fbbe.js"><link rel="prefetch" href="/assets/js/280.858032df.js"><link rel="prefetch" href="/assets/js/281.13402888.js"><link rel="prefetch" href="/assets/js/282.65c901c9.js"><link rel="prefetch" href="/assets/js/283.702cdc2f.js"><link rel="prefetch" href="/assets/js/284.01002b10.js"><link rel="prefetch" href="/assets/js/285.00fc4de4.js"><link rel="prefetch" href="/assets/js/286.1a84c013.js"><link rel="prefetch" href="/assets/js/287.3fc44a48.js"><link rel="prefetch" href="/assets/js/288.da5cb031.js"><link rel="prefetch" href="/assets/js/289.5852b8a9.js"><link rel="prefetch" href="/assets/js/29.2b32a5d6.js"><link rel="prefetch" href="/assets/js/290.ac2b31e1.js"><link rel="prefetch" href="/assets/js/291.89630793.js"><link rel="prefetch" href="/assets/js/292.95912971.js"><link rel="prefetch" href="/assets/js/293.20ab7b70.js"><link rel="prefetch" href="/assets/js/294.cabe7aa2.js"><link rel="prefetch" href="/assets/js/295.e488c1c3.js"><link rel="prefetch" href="/assets/js/296.70b8075a.js"><link rel="prefetch" href="/assets/js/297.9a49b786.js"><link rel="prefetch" href="/assets/js/298.99806246.js"><link rel="prefetch" href="/assets/js/299.d6b5ee58.js"><link rel="prefetch" href="/assets/js/3.a35f25f6.js"><link rel="prefetch" href="/assets/js/30.d75e5122.js"><link rel="prefetch" href="/assets/js/300.b699992f.js"><link rel="prefetch" href="/assets/js/301.6634171c.js"><link rel="prefetch" href="/assets/js/31.92755125.js"><link rel="prefetch" href="/assets/js/32.bbd6a004.js"><link rel="prefetch" href="/assets/js/33.4bbdceb6.js"><link rel="prefetch" href="/assets/js/34.dd87f46a.js"><link rel="prefetch" href="/assets/js/35.7ef1a75b.js"><link rel="prefetch" href="/assets/js/36.528aff8d.js"><link rel="prefetch" href="/assets/js/37.d21c6653.js"><link rel="prefetch" href="/assets/js/38.6ca18961.js"><link rel="prefetch" href="/assets/js/39.1ee7f3a5.js"><link rel="prefetch" href="/assets/js/4.b5ab30cb.js"><link rel="prefetch" href="/assets/js/40.0b3c147d.js"><link rel="prefetch" href="/assets/js/41.889fe914.js"><link rel="prefetch" href="/assets/js/42.fde0e7fa.js"><link rel="prefetch" href="/assets/js/43.37463413.js"><link rel="prefetch" href="/assets/js/44.e96735da.js"><link rel="prefetch" href="/assets/js/45.257d6aa5.js"><link rel="prefetch" href="/assets/js/46.f2e5805c.js"><link rel="prefetch" href="/assets/js/47.30be892a.js"><link rel="prefetch" href="/assets/js/48.92a33d06.js"><link rel="prefetch" href="/assets/js/49.560bb113.js"><link rel="prefetch" href="/assets/js/50.bf770a36.js"><link rel="prefetch" href="/assets/js/51.64bc002d.js"><link rel="prefetch" href="/assets/js/52.caf93e54.js"><link rel="prefetch" href="/assets/js/53.e583026f.js"><link rel="prefetch" href="/assets/js/54.5b7209b3.js"><link rel="prefetch" href="/assets/js/55.42843b6c.js"><link rel="prefetch" href="/assets/js/56.2326c6a8.js"><link rel="prefetch" href="/assets/js/57.311d9734.js"><link rel="prefetch" href="/assets/js/58.3fe66f57.js"><link rel="prefetch" href="/assets/js/59.3bc9d853.js"><link rel="prefetch" href="/assets/js/6.f1ba0f6c.js"><link rel="prefetch" href="/assets/js/60.21ab5134.js"><link rel="prefetch" href="/assets/js/61.6cd17b88.js"><link rel="prefetch" href="/assets/js/62.2d8caca8.js"><link rel="prefetch" href="/assets/js/63.15d448f1.js"><link rel="prefetch" href="/assets/js/64.1ae9ffb4.js"><link rel="prefetch" href="/assets/js/65.7ab139b2.js"><link rel="prefetch" href="/assets/js/66.4c19025a.js"><link rel="prefetch" href="/assets/js/67.520608e3.js"><link rel="prefetch" href="/assets/js/68.1d05086e.js"><link rel="prefetch" href="/assets/js/69.7b471079.js"><link rel="prefetch" href="/assets/js/7.7909dcc5.js"><link rel="prefetch" href="/assets/js/70.9d941bdb.js"><link rel="prefetch" href="/assets/js/71.47d4f736.js"><link rel="prefetch" href="/assets/js/72.0227d79a.js"><link rel="prefetch" href="/assets/js/73.13106822.js"><link rel="prefetch" href="/assets/js/74.7410b827.js"><link rel="prefetch" href="/assets/js/75.0ce9f321.js"><link rel="prefetch" href="/assets/js/76.3c1626a1.js"><link rel="prefetch" href="/assets/js/77.b4a66734.js"><link rel="prefetch" href="/assets/js/78.b02fefed.js"><link rel="prefetch" href="/assets/js/79.4739636c.js"><link rel="prefetch" href="/assets/js/8.ac8ea0a8.js"><link rel="prefetch" href="/assets/js/80.6ca8668a.js"><link rel="prefetch" href="/assets/js/81.a354ff71.js"><link rel="prefetch" href="/assets/js/82.19e66ca0.js"><link rel="prefetch" href="/assets/js/83.1481b77b.js"><link rel="prefetch" href="/assets/js/84.2240c05e.js"><link rel="prefetch" href="/assets/js/85.b137652e.js"><link rel="prefetch" href="/assets/js/86.407cdc7a.js"><link rel="prefetch" href="/assets/js/87.702fa884.js"><link rel="prefetch" href="/assets/js/88.c1d91815.js"><link rel="prefetch" href="/assets/js/89.5dd1083f.js"><link rel="prefetch" href="/assets/js/9.d0bdf35d.js"><link rel="prefetch" href="/assets/js/90.9a81466f.js"><link rel="prefetch" href="/assets/js/91.7102ade8.js"><link rel="prefetch" href="/assets/js/92.23444b97.js"><link rel="prefetch" href="/assets/js/93.25cf8a37.js"><link rel="prefetch" href="/assets/js/94.41ccc029.js"><link rel="prefetch" href="/assets/js/95.f829b83b.js"><link rel="prefetch" href="/assets/js/96.377c4b9c.js"><link rel="prefetch" href="/assets/js/97.3064607a.js"><link rel="prefetch" href="/assets/js/98.9fdd36f5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.66b259ef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-b51f5500><div data-v-b51f5500><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-b51f5500 data-v-b51f5500><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-5cb9a64e data-v-b51f5500 data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>派大星</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-b51f5500><div data-v-b51f5500><div id="smart" class="wrapper-page" style="background-image:url(https://pan.zealsay.com/zealsay/cover/4.jpg);background-position-x:center;background-position-y:center;background-size:cover;background-repeat-x:no-repeat;background-repeat-y:no-repeat;" data-v-b51f5500><header class="navbar" data-v-b51f5500><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="派大星" class="logo"> <span class="site-name">派大星</span></a> <div class="links"><div id="dayNightSwitch" class="generalWrapper" data-v-32f44868><a class="click" data-v-32f44868><div class="onOff daySwitch" data-v-32f44868><div class="star star1" data-v-32f44868></div> <div class="star star2" data-v-32f44868></div> <div class="star star3" data-v-32f44868></div> <div class="star star4" data-v-32f44868></div> <div class="star star5" data-v-32f44868></div> <div class="star sky" data-v-32f44868></div> <div class="sunMoon" data-v-32f44868><div class="crater crater1" data-v-32f44868></div> <div class="crater crater2" data-v-32f44868></div> <div class="crater crater3" data-v-32f44868></div> <div class="cloud part1" data-v-32f44868></div> <div class="cloud part2" data-v-32f44868></div></div></div></a></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-b51f5500></div> <aside class="sidebar" data-v-b51f5500><div class="personal-info-wrapper" data-v-03833281 data-v-b51f5500><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-03833281> <h3 class="name" data-v-03833281>
+    派大星
+  </h3> <div class="num" data-v-03833281><div data-v-03833281><h3 data-v-03833281>272</h3> <h6 data-v-03833281>文章</h6></div> <div data-v-03833281><h3 data-v-03833281>69</h3> <h6 data-v-03833281>标签</h6></div></div> <hr data-v-03833281></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-5cb9a64e data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>拯救你的年底KPI：前端性能优化</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div></div> <div data-v-b51f5500><main class="page"><div class="page-title" style="display:none;"><h1 class="title">拯救你的年底KPI：前端性能优化</h1> <div class="page-info" data-v-0efa1f05><i class="iconfont reco-account" data-v-0efa1f05><span data-v-0efa1f05>派大星</span></i> <i class="iconfont reco-date" data-v-0efa1f05><span data-v-0efa1f05>2020-12-28</span></i> <i class="iconfont reco-eye" data-v-0efa1f05><span id="/pages/49e2a780662e9/" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-0efa1f05><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-0efa1f05><span class="tag-item" data-v-0efa1f05>性能优化</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p align="center"><img width="500" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84785388faaf4492ab25c152ed739b75~tplv-k3u1fbpfcp-watermark.image"></p> <blockquote><p>拯救你的年底KPI：前端性能优化 🤔🤔🤔</p></blockquote> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p><code>性能优化</code> ，每个工程师跑不掉的一个话题。这里是本人结合<a href="http://www.imooc.com/u/9139180/courses" target="_blank" rel="noopener noreferrer">Mr.Max<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的一门课，总结的一些优化手法，希望对大家有所帮助，后续也会继续更新。 演示源码和PPT有条件分享（<code>一个赞</code>👍），感谢各位大哥😎</p> <h3 id="首发个人博客"><a href="#首发个人博客" class="header-anchor">#</a> 首发个人博客</h3> <p><a href="https://alexwjj.github.io/" target="_blank" rel="noopener noreferrer">种一棵树，最好的时机是十年前，其次是现在<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="演示demo"><a href="#演示demo" class="header-anchor">#</a> 演示demo</h3> <p><a href="http://118.25.49.69:8085/" target="_blank" rel="noopener noreferrer">在线预览<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://github.com/alexwjj/fe-optimize" target="_blank" rel="noopener noreferrer">fe-optimize 源码<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ac0b17f19454e15a3ec8d654d7b7ece~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="演示ppt-一定要看-超帅"><a href="#演示ppt-一定要看-超帅" class="header-anchor">#</a> 演示PPT (一定要看，超帅)</h3> <p><a href="http://118.25.49.69:8086/" target="_blank" rel="noopener noreferrer">在线预览<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://github.com/alexwjj/fe-ppt" target="_blank" rel="noopener noreferrer">fe-ppt 使用HTML做的PPT源码<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc3f5507f5b7415e95ec2c2b62131b22~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h2 id="前端性能的影响-长篇大论警告❗️❗️❗️"><a href="#前端性能的影响-长篇大论警告❗️❗️❗️" class="header-anchor">#</a> 前端性能的影响（长篇大论警告❗️❗️❗️）</h2> <p>前端性能的一个重要指标是页面加载时间，不仅事关用户体验，也是搜索引擎排名考虑的一个因素。</p> <ul><li>来自Google的数据表明，一个有10条数据0.4秒能加载完的页面，变成30条数据0.9秒加载完之后，流量和广告收入下降<code>90%</code>。</li> <li>Google Map 首页文件大小从<code>100KB</code>减小到<code>70-80KB</code>后，流量在第一周涨了<code>10%</code>，接下来的三周涨了<code>25%</code>。</li> <li>亚马逊的数据表明：加载时间增加<code>100毫秒</code>，销量就<code>下降1%</code>。</li></ul> <p>所以：重铸性能之光，我辈义不容辞😎</p> <h2 id="一、调试工具"><a href="#一、调试工具" class="header-anchor">#</a> 一、调试工具</h2> <p><strong>磨刀不误砍柴工，读完大学再打工！</strong></p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab4bef4550cf4e40986401df9a76199f~tplv-k3u1fbpfcp-watermark.image" alt=""> <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9572961cbcf64c7bb750387b67d74443~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="_1、network"><a href="#_1、network" class="header-anchor">#</a> 1、Network</h3> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62898f76c242450eb318b1816428ff65~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>这里可以看到资源加载详情，初步评估影响<code>页面性能</code>的因素。鼠标右键可以自定义选项卡，页面底部是当前加载资源的一个概览。<code>DOMContentLoaded</code> DOM渲染完成的时间，<code>Load</code>：当前页面所有资源加载完成的时间</p> <h4 id="思考-如何判断哪些资源对当前页面加载无用-做对应优化"><a href="#思考-如何判断哪些资源对当前页面加载无用-做对应优化" class="header-anchor">#</a> 思考：如何判断哪些资源对当前页面加载无用，做对应优化？</h4> <p><strong>shift + cmd + P  调出控制台的扩展工具，添加规则</strong> <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5141f1221f0494a93ace014e64b20ba~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h4 id="扩展工具-更多使用姿势"><a href="#扩展工具-更多使用姿势" class="header-anchor">#</a> 扩展工具 更多使用姿势</h4> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/578d7c1aec9b4ea2ae1d17e4ceef6857~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h4 id="瀑布流waterfall"><a href="#瀑布流waterfall" class="header-anchor">#</a> 瀑布流waterfall</h4> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1613fbeaffb64587a36613271ecfcade~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <ul><li><code>Queueing</code> 浏览器将资源放入队列时间</li> <li><code>Stalled</code> 因放入队列时间而发生的停滞时间</li> <li><code>DNS Lookup</code> DNS解析时间</li> <li><code>Initial connection</code>  建立HTTP连接的时间</li> <li><code>SSL</code> 浏览器与服务器建立安全性连接的时间</li> <li><code>TTFB</code> 等待服务端返回数据的时间</li> <li><code>Content Download</code>  浏览器下载资源的时间</li></ul> <h3 id="_2、lighthouse"><a href="#_2、lighthouse" class="header-anchor">#</a> 2、Lighthouse</h3> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce06248190e44dd4b043b168e596251f~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <ul><li><code>First Contentful Paint</code>  首屏渲染时间，1s以内绿色</li> <li><code>Speed Index</code>  速度指数，4s以内绿色</li> <li><code>Time to Interactive</code> 到页面可交换的时间</li></ul> <p>根据chrome的一些策略自动对网站做一个质量评估，并且会给出一些优化的建议。</p> <h3 id="_3、peformance"><a href="#_3、peformance" class="header-anchor">#</a> 3、Peformance</h3> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56fbfc64c756487c9ae61c9f59de9add~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>对网站最专业的分析~后面会多次讲到</p> <h3 id="_4、webpagetest"><a href="#_4、webpagetest" class="header-anchor">#</a> 4、webPageTest</h3> <p>可以模拟不同场景下访问的情况，比如模拟不同浏览器、不同国家等等，在线测试地址：<a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">webPageTest<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a1da6a84b5944311a4f8c6f78b2f5fa1~tplv-k3u1fbpfcp-watermark.image" alt=""> <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c2fd7f9c05be47bb80ad67064fc72917~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="_5、资源打包分析"><a href="#_5、资源打包分析" class="header-anchor">#</a> 5、资源打包分析</h3> <h4 id="webpack-bundle-analyzer"><a href="#webpack-bundle-analyzer" class="header-anchor">#</a> webpack-bundle-analyzer</h4> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1575bf78f22243bcb393b8dbc23d395b~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>npm install --save-dev webpack-bundle-analyzer
+// webpack.config.js 文件
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+module.exports={
+  plugins: [
+    new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerHost: '127.0.0.1',
+          analyzerPort: 8889,
+          reportFilename: 'report.html',
+          defaultSizes: 'parsed',
+          openAnalyzer: true,
+          generateStatsFile: false,
+          statsFilename: 'stats.json',
+          statsOptions: null,
+          logLevel: 'info'
+        }),
+  ]
+}
+
+// package.json
+&quot;analyz&quot;: &quot;NODE_ENV=production npm_config_report=true npm run build&quot;
+
+</code></pre></div><h4 id="开启source-map"><a href="#开启source-map" class="header-anchor">#</a> 开启source-map</h4> <p><code>webpack.config.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+    mode: 'production',
+    devtool: 'hidden-source-map',
+}
+</code></pre></div><p><code>package.json</code></p> <div class="language- extra-class"><pre class="language-text"><code>&quot;analyze&quot;: &quot;source-map-explorer 'build/*.js'&quot;,
+</code></pre></div><p><code>npm run analyze</code> <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2057c48588f942579c235925d943c162~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h2 id="二、web-api"><a href="#二、web-api" class="header-anchor">#</a> 二、WEB API</h2> <p>工欲善其事，必先利其器。浏览器提供的一些分析API<code>至关重要</code></p> <h3 id="_1、监听视窗激活状态"><a href="#_1、监听视窗激活状态" class="header-anchor">#</a> 1、监听视窗激活状态</h3> <p>大学都刷过慕课吧？只要离开窗口视频就会暂停~</p> <p>或者一些考试网站，提醒你不能离开当前窗口</p> <p>再或者，这种效果~
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b7ab11fc7b94fcf8c79bd3b28706b2c~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>// 窗口激活状态监听
+let vEvent = 'visibilitychange';
+if (document.webkitHidden != undefined) {
+    vEvent = 'webkitvisibilitychange';
+}
+
+function visibilityChanged() {
+    if (document.hidden || document.webkitHidden) {
+        document.title = '客官，别走啊~'
+        console.log(&quot;Web page is hidden.&quot;)
+    } else {
+        document.title = '客官，你又回来了呢~'
+        console.log(&quot;Web page is visible.&quot;)
+    }
+}
+
+document.addEventListener(vEvent, visibilityChanged, false);
+</code></pre></div><p>其实有很多隐藏的api，这里大家有兴趣的可以去试试看：</p> <h3 id="_2、观察长任务-performance-中task"><a href="#_2、观察长任务-performance-中task" class="header-anchor">#</a> 2、观察长任务（performance 中Task）</h3> <div class="language- extra-class"><pre class="language-text"><code>const observer = new PerformanceObserver((list) =&gt; {
+    for (const entry of list.getEntries()) {
+        console.log(entry)
+    }
+})
+
+observer.observe({entryTypes: ['longtask']})
+</code></pre></div><h3 id="_3、监听网络变化"><a href="#_3、监听网络变化" class="header-anchor">#</a> 3、监听网络变化</h3> <p>网络变化时给用户反馈网络问题，有时候看直播的时候自己的网络卡顿，直播平台也会提醒你或者自动给你切换清晰度</p> <div class="language- extra-class"><pre class="language-text"><code>var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var type = connection.effectiveType;
+
+function updateConnectionStatus() {
+  console.log(&quot;Connection type changed from &quot; + type + &quot; to &quot; + connection.effectiveType);
+  type = connection.effectiveType;
+}
+
+connection.addEventListener('change', updateConnectionStatus);
+</code></pre></div><h3 id="_4、计算domcontentloaded时间"><a href="#_4、计算domcontentloaded时间" class="header-anchor">#</a> 4、计算DOMContentLoaded时间</h3> <div class="language- extra-class"><pre class="language-text"><code>window.addEventListener('DOMContentLoaded', (event) =&gt; {
+    let timing = performance.getEntriesByType('navigation')[0];
+    console.log(timing.domInteractive);
+    console.log(timing.fetchStart);
+    let diff = timing.domInteractive - timing.fetchStart;
+    console.log(&quot;TTI: &quot; + diff);
+})
+</code></pre></div><h3 id="_5、更多计算规则"><a href="#_5、更多计算规则" class="header-anchor">#</a> 5、更多计算规则</h3> <div class="language- extra-class"><pre class="language-text"><code>DNS 解析耗时: domainLookupEnd - domainLookupStart
+TCP 连接耗时: connectEnd - connectStart
+SSL 安全连接耗时: connectEnd - secureConnectionStart
+网络请求耗时 (TTFB): responseStart - requestStart
+数据传输耗时: responseEnd - responseStart
+DOM 解析耗时: domInteractive - responseEnd
+资源加载耗时: loadEventStart - domContentLoadedEventEnd
+First Byte时间: responseStart - domainLookupStart
+白屏时间: responseEnd - fetchStart
+首次可交互时间: domInteractive - fetchStart
+DOM Ready 时间: domContentLoadEventEnd - fetchStart
+页面完全加载时间: loadEventStart - fetchStart
+http 头部大小： transferSize - encodedBodySize
+重定向次数：performance.navigation.redirectCount
+重定向耗时: redirectEnd - redirectStart
+</code></pre></div><h2 id="三、老生常谈-雅虎军规"><a href="#三、老生常谈-雅虎军规" class="header-anchor">#</a> 三、老生常谈，雅虎军规</h2> <p>磨好刀了，就该想想往哪里捅比较好了~ 🗡🗡🗡</p> <p>关于雅虎军规，你知道的有多少条，平时写用到的又有哪些？针对以下规则，我们可以做很多优化工作</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bda756efa4f546e3b2fd6744e2e3336c~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="_1、减少cookie传输"><a href="#_1、减少cookie传输" class="header-anchor">#</a> 1、减少cookie传输</h3> <p>cookie传输会造成带宽浪费，可以：</p> <ul><li>减少cookie中存储的东西</li> <li>静态资源不需要cookie，可以采用其他的域名，不会主动带上cookie。</li></ul> <h3 id="_2、避免过多的回流与重绘"><a href="#_2、避免过多的回流与重绘" class="header-anchor">#</a> 2、避免过多的回流与重绘</h3> <p>连续触发页面回流操作</p> <div class="language- extra-class"><pre class="language-text"><code>  let cards = document.getElementsByClassName(&quot;MuiPaper-rounded&quot;);
+  const update = (timestamp) =&gt; {
+    for (let i = 0; i &lt;cards.length; i++) {
+      let top = cards[i].offsetTop;
+      cards[i].style.width = ((Math.sin(cards[i].offsetTop + timestamp / 100 + 1) * 500) + 'px')
+    }
+    window.requestAnimationFrame(update)
+  }
+  update(1000);
+</code></pre></div><p>看下效果，很明显的卡顿
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7618dea1a4774c8685e9926b08d67fdd~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p><code>performance</code>分析结果，<code>load</code>事件之后存在大量的回流，并且<code>chrome</code>都给标记了红色
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b543d68fab7445da1dedb72bb224f69~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>使用<code>fastDom</code>进行优化，将对dom的<code>读和写</code>分离，合并</p> <div class="language- extra-class"><pre class="language-text"><code> let cards = document.getElementsByClassName(&quot;MuiPaper-rounded&quot;);
+  const update = (timestamp) =&gt; {
+    for (let i = 0; i &lt; cards.length; i++) {
+      fastdom.measure(() =&gt; {
+        let top = cards[i].offsetTop;
+        fastdom.mutate(() =&gt; {
+          cards[i].style.width =
+            Math.sin(top + timestamp / 100 + 1) * 500 + &quot;px&quot;;
+        });
+      });
+    }
+    window.requestAnimationFrame(update)
+  }
+  update(1000);
+</code></pre></div><p>再看下效果，很流畅~
+<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1df5c32c30494c13b3402305f866b327~tplv-k3u1fbpfcp-watermark.image" alt=""> <code>performance</code>分析结果，load事件之后也没有了那么多的红色标记
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db47cc5e20544043b9a5293c311dc0fe~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>感兴趣的可以去了解一下fastDom：<a href="https://github.com/wilsonpage/fastdom" target="_blank" rel="noopener noreferrer">github fastdom<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+在线预览：<a href="http://wilsonpage.github.io/fastdom/examples/animation.html" target="_blank" rel="noopener noreferrer">fastdom demo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>关于任务拆分与组合的思想，<code>react fiber</code>架构做的很牛逼，有兴趣的可以去了解一下调度算法在fiber中的实践</p> <h2 id="四、压缩"><a href="#四、压缩" class="header-anchor">#</a> 四、压缩</h2> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f36c2c1160134cb0a12083962a039e8b~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>嗯哼哼、确定一下没有走错场子，继续继续！</p> <h3 id="_1、gzip"><a href="#_1、gzip" class="header-anchor">#</a> 1、Gzip</h3> <p>开启方式可参考：<a href="https://juejin.cn/post/6844903605187641357" target="_blank" rel="noopener noreferrer">nginx开启gzip<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/28b74a28cf2f4646bd3890c2a6ebdfd9~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>还有一种方式：打包的时候生成gz文件，上传到服务器端，这样就不需要nginx来压缩了，可以降低服务器压力。
+可参考：<a href="https://segmentfault.com/a/1190000020976930" target="_blank" rel="noopener noreferrer">gzip压缩文件&amp;webPack配置Compression-webpack-plugin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_2、服务端压缩"><a href="#_2、服务端压缩" class="header-anchor">#</a> 2、服务端压缩</h3> <p><code>server.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express');
+const app = express();
+const fs = require('fs');
+const compression = require('compression');
+const path = require('path');
+
+
+app.use(compression());
+app.use(express.static('build'));
+
+app.get('*', (req,res) =&gt;{
+    res.sendFile(path.join(__dirname+'/build/index.html'));
+});
+
+const listener = app.listen(process.env.PORT || 3000, function () {
+    console.log(`Listening on port ${listener.address().port}`);
+});
+</code></pre></div><p><code>package.json</code></p> <div class="language- extra-class"><pre class="language-text"><code>&quot;start&quot;: &quot;npm run build &amp;&amp; node server.js&quot;,
+</code></pre></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9fbe174e17054f0a9d0bc66e53d31b5c~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="_3、javascript、css、html压缩"><a href="#_3、javascript、css、html压缩" class="header-anchor">#</a> 3、JavaScript、Css、Html压缩</h3> <p>工程化项目中直接使用对应的插件即可，webpack的主要有下面三个：</p> <ul><li>UglifyJS</li> <li>webpack-parallel-uglify-plugin</li> <li>terser-webpack-plugin
+具体优缺点可参考：<a href="https://blog.csdn.net/qq_24147051/article/details/103557728" target="_blank" rel="noopener noreferrer">webpack常用的三种JS压缩插件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。<code>压缩原理</code>简单的讲就是去除一些空格、换行、注释，借助es6模块化的功能，做了一些<code>tree-shaking</code>的优化。同时做了一些代码混淆，一方面是为了更小的体积，另一方面也是为了源码的安全性。</li></ul> <p>css压缩主要是mini-css-extract-plugin，当然前面的js压缩插件也会给你做好css压缩。使用姿势：</p> <div class="language- extra-class"><pre class="language-text"><code>npm install --save-dev mini-css-extract-plugin
+const MiniCssExtractPlugin = require(&quot;mini-css-extract-plugin&quot;);
+plugins:[
+ new MiniCssExtractPlugin({
+       filename: &quot;[name].css&quot;,
+       chunkFilename: &quot;[id].css&quot;
+   })
+]
+</code></pre></div><p>html压缩可以用<code>HtmlWebpackPlugin</code>，单页项目就一个index.html,性能提升微乎其微~</p> <h3 id="_4、http2首部压缩"><a href="#_4、http2首部压缩" class="header-anchor">#</a> 4、http2首部压缩</h3> <p><strong>http2的特点</strong></p> <ul><li>二进制分帧</li> <li>首部压缩</li> <li>流量控制</li> <li>多路复用</li> <li>请求优先级</li> <li>服务器推送<code>http2_push: 'xxx.jpg'</code>
+具体升级方式也很简单，修改一下nginx配置，方法请自行<code>Google</code></li></ul> <h2 id="五、webpack优化"><a href="#五、webpack优化" class="header-anchor">#</a> 五、webpack优化</h2> <p>上文中也提到了部分webpack插件，下面我再来看看还有哪些~</p> <h3 id="_1、dllplugin-提升构建速度"><a href="#_1、dllplugin-提升构建速度" class="header-anchor">#</a> 1、DllPlugin 提升构建速度</h3> <p>通过<code>DllPlugin</code>插件，将一些比较大的，基本很少升级的包拆分出来，生成<code>xx.dll.js</code>文件,通过<code>manifest.json</code>引用</p> <p><code>webpack.dll.config.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>const path = require(&quot;path&quot;);
+const webpack = require(&quot;webpack&quot;);
+module.exports = {
+    mode: &quot;production&quot;,
+    entry: {
+        react: [&quot;react&quot;, &quot;react-dom&quot;],
+    },
+    output: {
+        filename: &quot;[name].dll.js&quot;,
+        path: path.resolve(__dirname, &quot;dll&quot;),
+        library: &quot;[name]&quot;
+    },
+    plugins: [
+        new webpack.DllPlugin({
+            name: &quot;[name]&quot;,
+            path: path.resolve(__dirname, &quot;dll/[name].manifest.json&quot;)
+        })
+    ]
+};
+</code></pre></div><p><code>package.json</code></p> <div class="language- extra-class"><pre class="language-text"><code>&quot;scripts&quot;: {
+    &quot;dll-build&quot;: &quot;NODE_ENV=production webpack --config webpack.dll.config.js&quot;,
+  },
+</code></pre></div><h3 id="_2、splitchunks-拆包"><a href="#_2、splitchunks-拆包" class="header-anchor">#</a> 2、splitChunks 拆包</h3> <div class="language- extra-class"><pre class="language-text"><code>optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    name: 'vendor',
+                    test: /[\\/]node_modules[\\/]/,
+                    minSize: 0,
+                    minChunks: 1,
+                    priority: 10,
+                    chunks: 'initial'
+                },
+                common: {
+                    name: 'common',
+                    test: /[\\/]src[\\/]/,
+                    chunks: 'all',
+                    minSize: 0,
+                    minChunks: 2
+                }
+            }
+        }
+    },
+</code></pre></div><h2 id="六、骨架屏"><a href="#六、骨架屏" class="header-anchor">#</a> 六、骨架屏</h2> <p>用css提前占好位置，当资源加载完成即可填充，减少页面的回流与重绘，同时还能给用户最直接的反馈。
+图中使用插件：<a href="https://github.com/buildo/react-placeholder" target="_blank" rel="noopener noreferrer">react-placeholder<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3666ae07b9eb4d839f7a893b89d83f47~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>关于实现骨架屏还有很多种方案，用<code>Puppeteer</code>服务端渲染的挺多的</p> <p>使用css伪类：<a href="https://segmentfault.com/a/1190000020437426" target="_blank" rel="noopener noreferrer">只要css就能实现的骨架屏方案<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>等等</p> <h2 id="七、窗口化"><a href="#七、窗口化" class="header-anchor">#</a> 七、窗口化</h2> <p>原理：只加载当前窗口能显示的DOM元素，当视图变化时，删除隐藏的，添加要显示的DOM就可以保证页面上存在的dom元素数量永远不多，页面就不会卡顿</p> <p>图中使用的插件：<a href="https://github.com/bvaughn/react-window" target="_blank" rel="noopener noreferrer">react-window<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1a459cc811844b7793aff6c9878d19ad~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>安装：<code>npm i react-window</code></p> <p>引入：<code>import { FixedSizeList as List } from 'react-window';</code></p> <p>使用：</p> <div class="language- extra-class"><pre class="language-text"><code>const Row = ({ index, style }) =&gt; (
+  &lt;div style={style}&gt;Row {index}&lt;/div&gt;
+);
+ 
+const Example = () =&gt; (
+  &lt;List
+    height={150}
+    itemCount={1000}
+    itemSize={35}
+    width={300}
+  &gt;
+    {Row}
+  &lt;/List&gt;
+);
+</code></pre></div><h2 id="八、缓存"><a href="#八、缓存" class="header-anchor">#</a> 八、缓存</h2> <h3 id="_1、http缓存"><a href="#_1、http缓存" class="header-anchor">#</a> 1、http缓存</h3> <h4 id="keep-alive"><a href="#keep-alive" class="header-anchor">#</a> keep-alive</h4> <p>判断是否开启：看<code>response headers</code>中有没有<code>Connection: keep-alive</code>
+。开启以后，看<code>network</code>的瀑布流中就没有 <code>Initial connection</code>耗时了</p> <p>nginx设置keep-alive（默认开启）</p> <div class="language- extra-class"><pre class="language-text"><code># 0 为关闭
+#keepalive_timeout 0;
+# 65s无连接 关闭
+keepalive_timeout 65;
+# 连接数，达到100断开
+keepalive_requests 100;
+</code></pre></div><h4 id="cache-control-expires-max-age"><a href="#cache-control-expires-max-age" class="header-anchor">#</a> Cache-Control / Expires / Max-Age</h4> <p>设置资源是否缓存，以及缓存时间</p> <h4 id="etag-if-none-match"><a href="#etag-if-none-match" class="header-anchor">#</a> Etag / If-None-Match</h4> <p>资源唯一标识作对比，如果有变化，从服务器拉取资源。如果没变化则取缓存资源，状态码304，也就是协商缓存</p> <h4 id="last-modified-if-modified-since"><a href="#last-modified-if-modified-since" class="header-anchor">#</a> Last-Modified / If-Modified-Since</h4> <p>通过对比时间的差异来觉得要不要从服务器获取资源</p> <p>更多HTTP缓存参数可参考：<a href="https://harttle.land/2017/04/04/using-http-cache.html" target="_blank" rel="noopener noreferrer">使用 HTTP 缓存：Etag, Last-Modified 与 Cache-Control<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_2、service-worker"><a href="#_2、service-worker" class="header-anchor">#</a> 2、Service Worker</h3> <p>借助webpack插件<code>WorkboxWebpackPlugin</code>和<code>ManifestPlugin</code>,加载serviceWorker.js,通过<code>serviceWorker.register()</code>注册</p> <div class="language- extra-class"><pre class="language-text"><code>new WorkboxWebpackPlugin.GenerateSW({
+    clientsClaim: true,
+    exclude: [/\.map$/, /asset-manifest\.json$/],
+    importWorkboxFrom: 'cdn',
+    navigateFallback: paths.publicUrlOrPath + 'index.html',
+    navigateFallbackBlacklist: [
+        new RegExp('^/_'),
+        new RegExp('/[^/?]+\\.[^/]+$'),
+    ],
+}),
+
+new ManifestPlugin({
+    fileName: 'asset-manifest.json',
+    publicPath: paths.publicUrlOrPath,
+    generate: (seed, files, entrypoints) =&gt; {
+        const manifestFiles = files.reduce((manifest, file) =&gt; {
+            manifest[file.name] = file.path;
+            return manifest;
+        }, seed);
+        const entrypointFiles = entrypoints.app.filter(
+            fileName =&gt; !fileName.endsWith('.map')
+        );
+
+        return {
+            files: manifestFiles,
+            entrypoints: entrypointFiles,
+        };
+    },
+}),
+</code></pre></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24a6ef60ee9a4e44b4456e401f2dbcfe~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h2 id="九、预加载-懒加载"><a href="#九、预加载-懒加载" class="header-anchor">#</a> 九、预加载 &amp;&amp; 懒加载</h2> <h3 id="_1、preload"><a href="#_1、preload" class="header-anchor">#</a> 1、preload</h3> <p>就拿demo中的字体举例，正常情况下的加载顺序是这样的：
+<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e3226bc21f14a41ac195618456bdde9~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p><code>加入preload：</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;link rel=&quot;preload&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.119.woff2&quot; as=&quot;font&quot; crossorigin=&quot;anonymous&quot;/&gt; 
+&lt;link rel=&quot;preload&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.118.woff2&quot; as=&quot;font&quot; crossorigin=&quot;anonymous&quot;/&gt; 
+&lt;link rel=&quot;preload&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.116.woff2&quot; as=&quot;font&quot; crossorigin=&quot;anonymous&quot;/&gt; 
+</code></pre></div><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9790c73b17ef43a9acb1701215aca9d4~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h3 id="_2、prefetch"><a href="#_2、prefetch" class="header-anchor">#</a> 2、prefetch</h3> <p>场景：首页不需要这样的字体文件，下个页面需要：首页会以最低优先级Lowest来提前加载</p> <p><code>加入prefetch：</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;link rel=&quot;prefetch&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.113.woff2&quot; as=&quot;font&quot;/&gt; 
+&lt;link rel=&quot;prefetch&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.118.woff2&quot; as=&quot;font&quot;/&gt; 
+&lt;link rel=&quot;prefetch&quot; href=&quot;https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.117.woff2&quot; as=&quot;font&quot;/&gt; 
+</code></pre></div><p>需要的页面，从<code>prefetch cache</code>中取
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04a0fe68e9634c20b963d1d2817126ad~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p>webpack也是支持这两个属性的:<a href="https://www.cnblogs.com/skychx/p/webpack-webpackChunkName-webpackPreload-webpackPreload.html" target="_blank" rel="noopener noreferrer">webpackPrefetch 和 webpackPreload<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_3、懒加载"><a href="#_3、懒加载" class="header-anchor">#</a> 3、懒加载</h3> <h4 id="图片"><a href="#图片" class="header-anchor">#</a> 图片</h4> <p><code>机械图片</code> <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ed9e510588748d7b46d58d4ad13b4fe~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p><code>渐进式图片（类似高斯模糊）</code>
+需要UI小姐姐出稿的时候指定这种格式
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/070b324836b44beb80453f4bc5cccc0b~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <p><code>响应式图片</code></p> <p>原生模式：<code>&lt;img src=&quot;./img/index.jpg&quot; sizes=&quot;100vw&quot; srcset=&quot;./img/dog.jpg 800w, ./img/index.jpg 1200w&quot;/&gt;</code> <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7427e9243791461b8ffa49f47981cfba~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h4 id="路由懒加载"><a href="#路由懒加载" class="header-anchor">#</a> 路由懒加载</h4> <p>通过函数 + import实现</p> <p><code>const Page404 = () =&gt; import(/* webpackChunkName: &quot;error&quot; */'@views/errorPage/404');</code></p> <h2 id="十、ssr-react-snap"><a href="#十、ssr-react-snap" class="header-anchor">#</a> 十、ssr &amp;&amp; react-snap</h2> <ul><li>服务端渲染SSR，vue使用nuxt.js，react使用next.js</li> <li>react-snap可以借助Puppeteer实现先渲染单页，然后保留DOM，发送到客户端</li></ul> <h2 id="十一、体验优化"><a href="#十一、体验优化" class="header-anchor">#</a> 十一、体验优化</h2> <h3 id="白屏loading"><a href="#白屏loading" class="header-anchor">#</a> 白屏loading</h3> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41557f3a361c4cf899a4eab3bde79154~tplv-k3u1fbpfcp-watermark.image" alt=""> <strong>loading.html</strong> 需要自取哦，还有种方式，使用<code>webpack</code>插件<code>HtmlWebpackPlugin</code>将loading资源插入到页面中</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Loading&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+      #loadding {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      #loadding &gt; span {
+        display: inline-block;
+        width: 8px;
+        height: 100%;
+        margin-right: 5px;
+        border-radius: 4px;
+        -webkit-animation: load 1.04s ease infinite;
+        animation: load 1.04s ease infinite;
+      }
+      @keyframes load {
+        0%,
+        100% {
+          height: 40px;
+          background: #98beff;
+        }
+        50% {
+          height: 60px;
+          margin-top: -20px;
+          background: #3e7fee;
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div id=&quot;loadding&quot;&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span style=&quot;animation-delay: 0.13s&quot;&gt;&lt;/span&gt;
+      &lt;span style=&quot;animation-delay: 0.26s&quot;&gt;&lt;/span&gt;
+      &lt;span style=&quot;animation-delay: 0.39s&quot;&gt;&lt;/span&gt;
+      &lt;span style=&quot;animation-delay: 0.52s&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+      const $loadding = document.getElementById(&quot;loadding&quot;);
+      if (!$loadding) {
+        return;
+      }
+      $loadding.style.display = &quot;none&quot;;
+      $loadding.parentNode.removeChild($loadding);
+    });
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div><h2 id="招聘小广告"><a href="#招聘小广告" class="header-anchor">#</a> 招聘小广告</h2> <ul><li><code>微医集团</code> 医院支撑组</li> <li>坐标：浙江杭州</li> <li>社招3年+ 或者 21届实习</li> <li>简历邮箱： wujj@wedoctor.com</li></ul> <h2 id="更多性能优化-敬请期待"><a href="#更多性能优化-敬请期待" class="header-anchor">#</a> 更多性能优化，敬请期待~</h2> <p>学习 + 整理这些花了很长时间，路过的大哥们、小姐姐们还请给个赞👍，有问题的也可留言交流哈😝</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f54ccd795016409cb57c1a72aa28a75e~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h2 id="参考文章"><a href="#参考文章" class="header-anchor">#</a> 参考文章：</h2> <ul><li><a href="https://coding.imooc.com/class/448.html" target="_blank" rel="noopener noreferrer">Mr.Max慕课主页<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://juejin.cn/post/6844903657318645767#heading-1" target="_blank" rel="noopener noreferrer">前端性能优化之雅虎35条军规<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000012220132" target="_blank" rel="noopener noreferrer">webpack实践——webpack-bundle-analyzer 的使用<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://juejin.cn/post/6844903605187641357" target="_blank" rel="noopener noreferrer">nginx开启gzip<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000020976930" target="_blank" rel="noopener noreferrer">gzip压缩文件&amp;webPack配置Compression-webpack-plugin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://blog.csdn.net/qq_24147051/article/details/103557728" target="_blank" rel="noopener noreferrer">webpack常用的三种JS压缩插件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000020437426" target="_blank" rel="noopener noreferrer">只要css就能实现的骨架屏方案<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://harttle.land/2017/04/04/using-http-cache.html" target="_blank" rel="noopener noreferrer">使用 HTTP 缓存：Etag, Last-Modified 与 Cache-Control<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.cnblogs.com/skychx/p/webpack-webpackChunkName-webpackPreload-webpackPreload.html" target="_blank" rel="noopener noreferrer">webpackPrefetch 和 webpackPreload<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.dc354540.js" defer></script><script src="/assets/js/5.4a76941f.js" defer></script><script src="/assets/js/1.d393d5fa.js" defer></script><script src="/assets/js/99.13cebe9e.js" defer></script>
+  </body>
+</html>

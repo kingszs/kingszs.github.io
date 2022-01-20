@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React学习篇章二 | 派大星</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://pan.zealsay.com/blog/favicon.ico">
+    <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b0aae218897fa9d8a9f76e9a77e0b3c6";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="追逐目标的人">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.66b259ef.css" as="style"><link rel="preload" href="/assets/js/app.dc354540.js" as="script"><link rel="preload" href="/assets/js/5.4a76941f.js" as="script"><link rel="preload" href="/assets/js/1.d393d5fa.js" as="script"><link rel="preload" href="/assets/js/137.20cce46f.js" as="script"><link rel="prefetch" href="/assets/js/10.e46ede23.js"><link rel="prefetch" href="/assets/js/100.baa0f63c.js"><link rel="prefetch" href="/assets/js/101.86701951.js"><link rel="prefetch" href="/assets/js/102.b4190078.js"><link rel="prefetch" href="/assets/js/103.f1cf5887.js"><link rel="prefetch" href="/assets/js/104.a63bd1e2.js"><link rel="prefetch" href="/assets/js/105.4667c6b5.js"><link rel="prefetch" href="/assets/js/106.1c979c4e.js"><link rel="prefetch" href="/assets/js/107.bd8c4b0a.js"><link rel="prefetch" href="/assets/js/108.6dc8addb.js"><link rel="prefetch" href="/assets/js/109.1ad91853.js"><link rel="prefetch" href="/assets/js/11.8261ebdc.js"><link rel="prefetch" href="/assets/js/110.af89de8a.js"><link rel="prefetch" href="/assets/js/111.697aefaa.js"><link rel="prefetch" href="/assets/js/112.67c2d282.js"><link rel="prefetch" href="/assets/js/113.dab0f7c0.js"><link rel="prefetch" href="/assets/js/114.4f87f007.js"><link rel="prefetch" href="/assets/js/115.16f8855f.js"><link rel="prefetch" href="/assets/js/116.14168e53.js"><link rel="prefetch" href="/assets/js/117.6654267c.js"><link rel="prefetch" href="/assets/js/118.1ccf7f63.js"><link rel="prefetch" href="/assets/js/119.cda1ecfc.js"><link rel="prefetch" href="/assets/js/12.89243a8a.js"><link rel="prefetch" href="/assets/js/120.964abe12.js"><link rel="prefetch" href="/assets/js/121.447afeec.js"><link rel="prefetch" href="/assets/js/122.4400c66f.js"><link rel="prefetch" href="/assets/js/123.7333fbb5.js"><link rel="prefetch" href="/assets/js/124.4e1e5d83.js"><link rel="prefetch" href="/assets/js/125.84a815d2.js"><link rel="prefetch" href="/assets/js/126.f6953f7c.js"><link rel="prefetch" href="/assets/js/127.5cf7ab43.js"><link rel="prefetch" href="/assets/js/128.7e139c47.js"><link rel="prefetch" href="/assets/js/129.157b5231.js"><link rel="prefetch" href="/assets/js/13.78b93ffa.js"><link rel="prefetch" href="/assets/js/130.da81a8d0.js"><link rel="prefetch" href="/assets/js/131.952c499e.js"><link rel="prefetch" href="/assets/js/132.f24bd10f.js"><link rel="prefetch" href="/assets/js/133.49e32e51.js"><link rel="prefetch" href="/assets/js/134.711cfa6e.js"><link rel="prefetch" href="/assets/js/135.8aa19670.js"><link rel="prefetch" href="/assets/js/136.51e97ea8.js"><link rel="prefetch" href="/assets/js/138.9d95ccdf.js"><link rel="prefetch" href="/assets/js/139.fe1fe9aa.js"><link rel="prefetch" href="/assets/js/14.f2551251.js"><link rel="prefetch" href="/assets/js/140.807217a8.js"><link rel="prefetch" href="/assets/js/141.5fce4892.js"><link rel="prefetch" href="/assets/js/142.fd6252e0.js"><link rel="prefetch" href="/assets/js/143.2e475d5c.js"><link rel="prefetch" href="/assets/js/144.5160914c.js"><link rel="prefetch" href="/assets/js/145.7d323e96.js"><link rel="prefetch" href="/assets/js/146.1030207b.js"><link rel="prefetch" href="/assets/js/147.c2f71711.js"><link rel="prefetch" href="/assets/js/148.b69fc63e.js"><link rel="prefetch" href="/assets/js/149.1bb9d3d3.js"><link rel="prefetch" href="/assets/js/15.46207edd.js"><link rel="prefetch" href="/assets/js/150.d9aac19b.js"><link rel="prefetch" href="/assets/js/151.07a17ce0.js"><link rel="prefetch" href="/assets/js/152.73a68196.js"><link rel="prefetch" href="/assets/js/153.0d79b837.js"><link rel="prefetch" href="/assets/js/154.2cfe2073.js"><link rel="prefetch" href="/assets/js/155.32217503.js"><link rel="prefetch" href="/assets/js/156.201bb801.js"><link rel="prefetch" href="/assets/js/157.09298989.js"><link rel="prefetch" href="/assets/js/158.cb785f40.js"><link rel="prefetch" href="/assets/js/159.25706958.js"><link rel="prefetch" href="/assets/js/16.79012710.js"><link rel="prefetch" href="/assets/js/160.cc7f6b12.js"><link rel="prefetch" href="/assets/js/161.9a5d76e3.js"><link rel="prefetch" href="/assets/js/162.0be38a36.js"><link rel="prefetch" href="/assets/js/163.43e49338.js"><link rel="prefetch" href="/assets/js/164.d1029618.js"><link rel="prefetch" href="/assets/js/165.230c5023.js"><link rel="prefetch" href="/assets/js/166.91d35f5f.js"><link rel="prefetch" href="/assets/js/167.1ab59e5a.js"><link rel="prefetch" href="/assets/js/168.965d615e.js"><link rel="prefetch" href="/assets/js/169.087dc7b3.js"><link rel="prefetch" href="/assets/js/17.788583ce.js"><link rel="prefetch" href="/assets/js/170.1f51d0c2.js"><link rel="prefetch" href="/assets/js/171.4a94ca24.js"><link rel="prefetch" href="/assets/js/172.64467f96.js"><link rel="prefetch" href="/assets/js/173.1aafa815.js"><link rel="prefetch" href="/assets/js/174.d72e1d41.js"><link rel="prefetch" href="/assets/js/175.dbe588f1.js"><link rel="prefetch" href="/assets/js/176.b28e5a8b.js"><link rel="prefetch" href="/assets/js/177.e2ffcefe.js"><link rel="prefetch" href="/assets/js/178.2653dac4.js"><link rel="prefetch" href="/assets/js/179.3cf49903.js"><link rel="prefetch" href="/assets/js/18.84be972a.js"><link rel="prefetch" href="/assets/js/180.b0ad9005.js"><link rel="prefetch" href="/assets/js/181.0a38c35f.js"><link rel="prefetch" href="/assets/js/182.899b0187.js"><link rel="prefetch" href="/assets/js/183.b956ad20.js"><link rel="prefetch" href="/assets/js/184.44fa9ac6.js"><link rel="prefetch" href="/assets/js/185.976c2c60.js"><link rel="prefetch" href="/assets/js/186.5af784b4.js"><link rel="prefetch" href="/assets/js/187.989c86cc.js"><link rel="prefetch" href="/assets/js/188.f9bd43e2.js"><link rel="prefetch" href="/assets/js/189.c448c6d3.js"><link rel="prefetch" href="/assets/js/19.b63ddcf4.js"><link rel="prefetch" href="/assets/js/190.8cef9d97.js"><link rel="prefetch" href="/assets/js/191.f59632ce.js"><link rel="prefetch" href="/assets/js/192.d3c9b2a2.js"><link rel="prefetch" href="/assets/js/193.a85c48cc.js"><link rel="prefetch" href="/assets/js/194.14e12c98.js"><link rel="prefetch" href="/assets/js/195.2584a376.js"><link rel="prefetch" href="/assets/js/196.ce6d4ce0.js"><link rel="prefetch" href="/assets/js/197.1b6ec0e6.js"><link rel="prefetch" href="/assets/js/198.c4df111c.js"><link rel="prefetch" href="/assets/js/199.6c4027a9.js"><link rel="prefetch" href="/assets/js/20.658ac3f6.js"><link rel="prefetch" href="/assets/js/200.605d9505.js"><link rel="prefetch" href="/assets/js/201.7a4dde66.js"><link rel="prefetch" href="/assets/js/202.792310e0.js"><link rel="prefetch" href="/assets/js/203.9708b626.js"><link rel="prefetch" href="/assets/js/204.74b2cf23.js"><link rel="prefetch" href="/assets/js/205.41ecfc1d.js"><link rel="prefetch" href="/assets/js/206.1c18dadb.js"><link rel="prefetch" href="/assets/js/207.868a8965.js"><link rel="prefetch" href="/assets/js/208.1c55f2b1.js"><link rel="prefetch" href="/assets/js/209.a5988f51.js"><link rel="prefetch" href="/assets/js/21.7ec90894.js"><link rel="prefetch" href="/assets/js/210.e721f198.js"><link rel="prefetch" href="/assets/js/211.f1d32bc1.js"><link rel="prefetch" href="/assets/js/212.2782b9ad.js"><link rel="prefetch" href="/assets/js/213.314f78e0.js"><link rel="prefetch" href="/assets/js/214.c7afce7a.js"><link rel="prefetch" href="/assets/js/215.552a2114.js"><link rel="prefetch" href="/assets/js/216.c6ab8bac.js"><link rel="prefetch" href="/assets/js/217.be20c0ed.js"><link rel="prefetch" href="/assets/js/218.1fd92ca0.js"><link rel="prefetch" href="/assets/js/219.99a3f2aa.js"><link rel="prefetch" href="/assets/js/22.eb8c0ada.js"><link rel="prefetch" href="/assets/js/220.a74ae108.js"><link rel="prefetch" href="/assets/js/221.d1526b18.js"><link rel="prefetch" href="/assets/js/222.bc590c25.js"><link rel="prefetch" href="/assets/js/223.ec10b8d0.js"><link rel="prefetch" href="/assets/js/224.c0a4d5ea.js"><link rel="prefetch" href="/assets/js/225.1cf7511f.js"><link rel="prefetch" href="/assets/js/226.5e7078ba.js"><link rel="prefetch" href="/assets/js/227.ad91b5f7.js"><link rel="prefetch" href="/assets/js/228.6cfc93f5.js"><link rel="prefetch" href="/assets/js/229.c97c767a.js"><link rel="prefetch" href="/assets/js/23.a8943735.js"><link rel="prefetch" href="/assets/js/230.21b65feb.js"><link rel="prefetch" href="/assets/js/231.df72e780.js"><link rel="prefetch" href="/assets/js/232.493720f5.js"><link rel="prefetch" href="/assets/js/233.965fd9da.js"><link rel="prefetch" href="/assets/js/234.4345f0b0.js"><link rel="prefetch" href="/assets/js/235.8103bbb4.js"><link rel="prefetch" href="/assets/js/236.5ad07565.js"><link rel="prefetch" href="/assets/js/237.6127271d.js"><link rel="prefetch" href="/assets/js/238.7253f9b2.js"><link rel="prefetch" href="/assets/js/239.1f5383b7.js"><link rel="prefetch" href="/assets/js/24.b263a917.js"><link rel="prefetch" href="/assets/js/240.463e34f8.js"><link rel="prefetch" href="/assets/js/241.8a5fc2d2.js"><link rel="prefetch" href="/assets/js/242.2f36965d.js"><link rel="prefetch" href="/assets/js/243.a3a8572c.js"><link rel="prefetch" href="/assets/js/244.e0e626ce.js"><link rel="prefetch" href="/assets/js/245.f1dc0764.js"><link rel="prefetch" href="/assets/js/246.3c39b2fa.js"><link rel="prefetch" href="/assets/js/247.5802cfd8.js"><link rel="prefetch" href="/assets/js/248.ddef8464.js"><link rel="prefetch" href="/assets/js/249.6a4ef8ba.js"><link rel="prefetch" href="/assets/js/25.52e40195.js"><link rel="prefetch" href="/assets/js/250.15481e6f.js"><link rel="prefetch" href="/assets/js/251.a7220300.js"><link rel="prefetch" href="/assets/js/252.abcb0a89.js"><link rel="prefetch" href="/assets/js/253.bb12b283.js"><link rel="prefetch" href="/assets/js/254.1f5051aa.js"><link rel="prefetch" href="/assets/js/255.7869a245.js"><link rel="prefetch" href="/assets/js/256.21b9282f.js"><link rel="prefetch" href="/assets/js/257.90c0afe1.js"><link rel="prefetch" href="/assets/js/258.643020d0.js"><link rel="prefetch" href="/assets/js/259.5fe9ed6e.js"><link rel="prefetch" href="/assets/js/26.565c0ade.js"><link rel="prefetch" href="/assets/js/260.7eddc292.js"><link rel="prefetch" href="/assets/js/261.f321b0b1.js"><link rel="prefetch" href="/assets/js/262.8fbf5f36.js"><link rel="prefetch" href="/assets/js/263.f98b49da.js"><link rel="prefetch" href="/assets/js/264.e25cb29d.js"><link rel="prefetch" href="/assets/js/265.f89c5e00.js"><link rel="prefetch" href="/assets/js/266.34c45519.js"><link rel="prefetch" href="/assets/js/267.1793917f.js"><link rel="prefetch" href="/assets/js/268.0a2b7f57.js"><link rel="prefetch" href="/assets/js/269.a36eb714.js"><link rel="prefetch" href="/assets/js/27.7f50fe6a.js"><link rel="prefetch" href="/assets/js/270.8d8ec855.js"><link rel="prefetch" href="/assets/js/271.69ea5461.js"><link rel="prefetch" href="/assets/js/272.a88553e6.js"><link rel="prefetch" href="/assets/js/273.757eec12.js"><link rel="prefetch" href="/assets/js/274.5a3d8dbf.js"><link rel="prefetch" href="/assets/js/275.4aa2667f.js"><link rel="prefetch" href="/assets/js/276.06475254.js"><link rel="prefetch" href="/assets/js/277.9f54c560.js"><link rel="prefetch" href="/assets/js/278.49c48cb7.js"><link rel="prefetch" href="/assets/js/279.87469112.js"><link rel="prefetch" href="/assets/js/28.4f20fbbe.js"><link rel="prefetch" href="/assets/js/280.858032df.js"><link rel="prefetch" href="/assets/js/281.13402888.js"><link rel="prefetch" href="/assets/js/282.65c901c9.js"><link rel="prefetch" href="/assets/js/283.702cdc2f.js"><link rel="prefetch" href="/assets/js/284.01002b10.js"><link rel="prefetch" href="/assets/js/285.00fc4de4.js"><link rel="prefetch" href="/assets/js/286.1a84c013.js"><link rel="prefetch" href="/assets/js/287.3fc44a48.js"><link rel="prefetch" href="/assets/js/288.da5cb031.js"><link rel="prefetch" href="/assets/js/289.5852b8a9.js"><link rel="prefetch" href="/assets/js/29.2b32a5d6.js"><link rel="prefetch" href="/assets/js/290.ac2b31e1.js"><link rel="prefetch" href="/assets/js/291.89630793.js"><link rel="prefetch" href="/assets/js/292.95912971.js"><link rel="prefetch" href="/assets/js/293.20ab7b70.js"><link rel="prefetch" href="/assets/js/294.cabe7aa2.js"><link rel="prefetch" href="/assets/js/295.e488c1c3.js"><link rel="prefetch" href="/assets/js/296.70b8075a.js"><link rel="prefetch" href="/assets/js/297.9a49b786.js"><link rel="prefetch" href="/assets/js/298.99806246.js"><link rel="prefetch" href="/assets/js/299.d6b5ee58.js"><link rel="prefetch" href="/assets/js/3.a35f25f6.js"><link rel="prefetch" href="/assets/js/30.d75e5122.js"><link rel="prefetch" href="/assets/js/300.b699992f.js"><link rel="prefetch" href="/assets/js/301.6634171c.js"><link rel="prefetch" href="/assets/js/31.92755125.js"><link rel="prefetch" href="/assets/js/32.bbd6a004.js"><link rel="prefetch" href="/assets/js/33.4bbdceb6.js"><link rel="prefetch" href="/assets/js/34.dd87f46a.js"><link rel="prefetch" href="/assets/js/35.7ef1a75b.js"><link rel="prefetch" href="/assets/js/36.528aff8d.js"><link rel="prefetch" href="/assets/js/37.d21c6653.js"><link rel="prefetch" href="/assets/js/38.6ca18961.js"><link rel="prefetch" href="/assets/js/39.1ee7f3a5.js"><link rel="prefetch" href="/assets/js/4.b5ab30cb.js"><link rel="prefetch" href="/assets/js/40.0b3c147d.js"><link rel="prefetch" href="/assets/js/41.889fe914.js"><link rel="prefetch" href="/assets/js/42.fde0e7fa.js"><link rel="prefetch" href="/assets/js/43.37463413.js"><link rel="prefetch" href="/assets/js/44.e96735da.js"><link rel="prefetch" href="/assets/js/45.257d6aa5.js"><link rel="prefetch" href="/assets/js/46.f2e5805c.js"><link rel="prefetch" href="/assets/js/47.30be892a.js"><link rel="prefetch" href="/assets/js/48.92a33d06.js"><link rel="prefetch" href="/assets/js/49.560bb113.js"><link rel="prefetch" href="/assets/js/50.bf770a36.js"><link rel="prefetch" href="/assets/js/51.64bc002d.js"><link rel="prefetch" href="/assets/js/52.caf93e54.js"><link rel="prefetch" href="/assets/js/53.e583026f.js"><link rel="prefetch" href="/assets/js/54.5b7209b3.js"><link rel="prefetch" href="/assets/js/55.42843b6c.js"><link rel="prefetch" href="/assets/js/56.2326c6a8.js"><link rel="prefetch" href="/assets/js/57.311d9734.js"><link rel="prefetch" href="/assets/js/58.3fe66f57.js"><link rel="prefetch" href="/assets/js/59.3bc9d853.js"><link rel="prefetch" href="/assets/js/6.f1ba0f6c.js"><link rel="prefetch" href="/assets/js/60.21ab5134.js"><link rel="prefetch" href="/assets/js/61.6cd17b88.js"><link rel="prefetch" href="/assets/js/62.2d8caca8.js"><link rel="prefetch" href="/assets/js/63.15d448f1.js"><link rel="prefetch" href="/assets/js/64.1ae9ffb4.js"><link rel="prefetch" href="/assets/js/65.7ab139b2.js"><link rel="prefetch" href="/assets/js/66.4c19025a.js"><link rel="prefetch" href="/assets/js/67.520608e3.js"><link rel="prefetch" href="/assets/js/68.1d05086e.js"><link rel="prefetch" href="/assets/js/69.7b471079.js"><link rel="prefetch" href="/assets/js/7.7909dcc5.js"><link rel="prefetch" href="/assets/js/70.9d941bdb.js"><link rel="prefetch" href="/assets/js/71.47d4f736.js"><link rel="prefetch" href="/assets/js/72.0227d79a.js"><link rel="prefetch" href="/assets/js/73.13106822.js"><link rel="prefetch" href="/assets/js/74.7410b827.js"><link rel="prefetch" href="/assets/js/75.0ce9f321.js"><link rel="prefetch" href="/assets/js/76.3c1626a1.js"><link rel="prefetch" href="/assets/js/77.b4a66734.js"><link rel="prefetch" href="/assets/js/78.b02fefed.js"><link rel="prefetch" href="/assets/js/79.4739636c.js"><link rel="prefetch" href="/assets/js/8.ac8ea0a8.js"><link rel="prefetch" href="/assets/js/80.6ca8668a.js"><link rel="prefetch" href="/assets/js/81.a354ff71.js"><link rel="prefetch" href="/assets/js/82.19e66ca0.js"><link rel="prefetch" href="/assets/js/83.1481b77b.js"><link rel="prefetch" href="/assets/js/84.2240c05e.js"><link rel="prefetch" href="/assets/js/85.b137652e.js"><link rel="prefetch" href="/assets/js/86.407cdc7a.js"><link rel="prefetch" href="/assets/js/87.702fa884.js"><link rel="prefetch" href="/assets/js/88.c1d91815.js"><link rel="prefetch" href="/assets/js/89.5dd1083f.js"><link rel="prefetch" href="/assets/js/9.d0bdf35d.js"><link rel="prefetch" href="/assets/js/90.9a81466f.js"><link rel="prefetch" href="/assets/js/91.7102ade8.js"><link rel="prefetch" href="/assets/js/92.23444b97.js"><link rel="prefetch" href="/assets/js/93.25cf8a37.js"><link rel="prefetch" href="/assets/js/94.41ccc029.js"><link rel="prefetch" href="/assets/js/95.f829b83b.js"><link rel="prefetch" href="/assets/js/96.377c4b9c.js"><link rel="prefetch" href="/assets/js/97.3064607a.js"><link rel="prefetch" href="/assets/js/98.9fdd36f5.js"><link rel="prefetch" href="/assets/js/99.13cebe9e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.66b259ef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-b51f5500><div data-v-b51f5500><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-b51f5500 data-v-b51f5500><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-5cb9a64e data-v-b51f5500 data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>派大星</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-b51f5500><div data-v-b51f5500><div id="smart" class="wrapper-page" style="background-image:url(https://pan.zealsay.com/zealsay/cover/4.jpg);background-position-x:center;background-position-y:center;background-size:cover;background-repeat-x:no-repeat;background-repeat-y:no-repeat;" data-v-b51f5500><header class="navbar" data-v-b51f5500><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="派大星" class="logo"> <span class="site-name">派大星</span></a> <div class="links"><div id="dayNightSwitch" class="generalWrapper" data-v-32f44868><a class="click" data-v-32f44868><div class="onOff daySwitch" data-v-32f44868><div class="star star1" data-v-32f44868></div> <div class="star star2" data-v-32f44868></div> <div class="star star3" data-v-32f44868></div> <div class="star star4" data-v-32f44868></div> <div class="star star5" data-v-32f44868></div> <div class="star sky" data-v-32f44868></div> <div class="sunMoon" data-v-32f44868><div class="crater crater1" data-v-32f44868></div> <div class="crater crater2" data-v-32f44868></div> <div class="crater crater3" data-v-32f44868></div> <div class="cloud part1" data-v-32f44868></div> <div class="cloud part2" data-v-32f44868></div></div></div></a></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-b51f5500></div> <aside class="sidebar" data-v-b51f5500><div class="personal-info-wrapper" data-v-03833281 data-v-b51f5500><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-03833281> <h3 class="name" data-v-03833281>
+    派大星
+  </h3> <div class="num" data-v-03833281><div data-v-03833281><h3 data-v-03833281>272</h3> <h6 data-v-03833281>文章</h6></div> <div data-v-03833281><h3 data-v-03833281>69</h3> <h6 data-v-03833281>标签</h6></div></div> <hr data-v-03833281></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-5cb9a64e data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>React学习篇章二</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div></div> <div data-v-b51f5500><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">React学习篇章二</h1> <div class="page-info" data-v-0efa1f05><i class="iconfont reco-account" data-v-0efa1f05><span data-v-0efa1f05>派大星</span></i> <i class="iconfont reco-date" data-v-0efa1f05><span data-v-0efa1f05>2021-01-01</span></i> <i class="iconfont reco-eye" data-v-0efa1f05><span id="/blogs/docs/React/2021/20220107React02.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-0efa1f05><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-0efa1f05><span class="tag-item" data-v-0efa1f05>React</span><span class="tag-item" data-v-0efa1f05>脚手架</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="react02"><a href="#react02" class="header-anchor">#</a> React02</h1> <h1 id="回顾"><a href="#回顾" class="header-anchor">#</a> 回顾</h1> <p>React 用于构建用户界面的 JavaScript 库</p> <p>国内三大框架</p> <p>Vue [需要记忆一些写法，指令...]</p> <p>React [在写大量的 JS 代码]</p> <p>Augular [大型和重型的项目 大而全的框架] JS 框架</p> <p>框架的热度，流不流行 github 的 start npmjs 包下载量</p> <p>公司使用任何框架 在于公司目前技术栈的选择</p> <p>React</p> <p>编写方式:</p> <ul><li><p>脚本引入方式 script src 属性</p> <p>react.js React 对象 管理 React 虚拟 DOM</p> <p>react-dom.js reactDOM 对象 渲染操作 DOM 的</p> <p>babel.js 转义 JS 语法 转义 JSX 语法为 JS 代码</p></li></ul> <p>JSX 语法 可以认为和 html 语法差不多，一些细节的属性，注意比如说 class className</p> <p><code>{}</code>JS 代码范围 里面的代码会被 JS 解析执行</p> <p>组件封装方式：</p> <ul><li><p>rfc 函数组件 react function component <code>之前无状态组件</code></p> <p>之前函数组件无法使用 state 组件状态 hook</p> <p>16.8 版本已经可以</p></li> <li><p>rcc 类组件 react class component 功能更为全面 之前 react 主流开发组件方式就是 rcc</p></li></ul> <div class="language-HTML extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>IE=edge<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>JSX语法<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>root<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/babel.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/react.development.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/react-dom.development.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/babel<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">// 外部传入组件参数 状态 数据</span>
+    <span class="token keyword">function</span> <span class="token function">Hero</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// es6 解构语法</span>
+        <span class="token keyword">const</span><span class="token punctuation">{</span>name<span class="token punctuation">,</span>job<span class="token punctuation">,</span>price<span class="token punctuation">}</span> <span class="token operator">=</span> props
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>名称<span class="token operator">:</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>职业<span class="token operator">:</span><span class="token punctuation">{</span>job<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>价格<span class="token operator">:</span><span class="token punctuation">{</span>price<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 调用组件</span>
+    <span class="token comment">// 调用方式一  函数调用方式</span>
+    <span class="token keyword">let</span> vNode <span class="token operator">=</span> <span class="token function">Hero</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'后裔'</span><span class="token punctuation">,</span><span class="token literal-property property">job</span><span class="token operator">:</span><span class="token string">'射手'</span><span class="token punctuation">,</span><span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">6800</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 调用方式二 组件标签方式调用</span>
+    <span class="token comment">// JS代码需要用{}包裹</span>
+    vNode <span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Hero  name<span class="token operator">=</span><span class="token string">&quot;凯&quot;</span>  job<span class="token operator">=</span><span class="token string">&quot;打野&quot;</span> price<span class="token operator">=</span><span class="token string">&quot;13888&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Hero  name<span class="token operator">=</span><span class="token string">&quot;蔡文姬&quot;</span>  job<span class="token operator">=</span><span class="token string">&quot;辅助&quot;</span> price<span class="token operator">=</span><span class="token string">&quot;13888&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Hero  name<span class="token operator">=</span><span class="token string">&quot;瑶&quot;</span>  job<span class="token operator">=</span><span class="token string">&quot;辅助&quot;</span> price<span class="token operator">=</span><span class="token string">&quot;13888&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>hr<span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span><span class="token function">Hero</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'后裔'</span><span class="token punctuation">,</span><span class="token literal-property property">job</span><span class="token operator">:</span><span class="token string">'射手'</span><span class="token punctuation">,</span><span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">6800</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vNode<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h1 id="类组件"><a href="#类组件" class="header-anchor">#</a> 类组件</h1> <p>以类的方式封装组件 功能更为全面一些，早期(16.8 版本以前 )函数组件无法支持 <code>state组件状态，组件生命周期</code>,只能使用类组件</p> <p>组件 hook 函数组件使用 state 和生命周期</p> <div class="language-react extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;类组件&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;/babel.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        // 类组件
+        // es6语法中class是类的声明关键字
+        // extends继承  可以得到 复用父类的功能
+        // 继承React组件
+        // 类名也是大驼峰
+        class Hello extends React.Component{
+            // 方法
+            render(){
+                return &lt;h1&gt;hello 类组件&lt;/h1&gt;
+            }
+        }
+        // 调用方式1：实例化对象使用
+        // new 关键字 通过类实例化一个对象
+        let vNode = new Hello().render();
+        // 调用方式2:组件标签调用方式
+        vNode = &lt;Hello/&gt;
+        ReactDOM.render(vNode,document.getElementById(&quot;root&quot;))
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><p>类组件的传参</p> <div class="language-react extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;类组件传参&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;/babel.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class HelloName extends React.Component{
+            // react组件父类把props进行处理
+            // 方法中使用可以通过this.props调用
+            render(){
+                return &lt;h1&gt;hello,{this.props.name}&lt;/h1&gt;
+            }
+        }
+        // JS语法调用
+        let vNode = new HelloName({name:'类组件'}).render()
+        // 组件标签方式调用
+        vNode = &lt;HelloName name=&quot;class component&quot;/&gt;
+        // 复用
+        vNode = (
+            &lt;div&gt;
+                {new HelloName({name:'类组件1'}).render()}
+                {new HelloName({name:'类组件2'}).render()}
+                {new HelloName({name:'类组件3'}).render()}
+                &lt;HelloName name=&quot;class1 component&quot;/&gt;
+                &lt;HelloName name=&quot;class2 component&quot;/&gt;
+            &lt;/div&gt;
+        )
+        ReactDOM.render(vNode,document.getElementById(&quot;root&quot;))
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><h1 id="事件"><a href="#事件" class="header-anchor">#</a> 事件</h1> <div class="language-react extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;JSX语法&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;/babel.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class App extends React.Component{
+            // 事件处理方法
+            show(){
+                alert('你点击到我了！')
+            }
+            // 返回一个标签
+            showName(){
+                return &lt;h1&gt;hello react&lt;/h1&gt;
+            }
+            render(){
+                return (
+                    &lt;div&gt;
+                        {/*调用显示标签 方法调用要立即执行   方法如果不需要立即调用就不需要写()*/}
+                        {this.showName()}
+                        {/*JSX语法里的主食*/}
+                        {/*事件触发的方法不需要加(),加括号就立即触发了，这里点击事件触发后，再调用方法*/}
+                        &lt;button onClick={this.show}&gt;点击显示&lt;/button&gt;
+                    &lt;/div&gt;
+                )
+            }
+        }
+        ReactDOM.render(&lt;App/&gt;,document.getElementById(&quot;root&quot;))
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><div class="language-react extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;事件触发后this的指向&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;/babel.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class App extends React.Component{
+            // 类属性 类变量
+            name = &quot;hello,react&quot;
+            show(){
+                    // alert('show1触发了')
+                    // this.属性名称 调用属性
+                    /*
+                    *事件触发后this指向谁?
+                    *默认情况指向window
+                    *严格模式下指向undefined
+                    *React默认是严格模式
+                    *this指向保持 怎么做？
+                    *解决方案:绑定this操作
+                    *bind  只绑定
+                    *apply，call  绑定之后会调用方法
+                    *this
+                    * this就是组件对象
+                    */
+                    console.log(this);
+                    console.log(this.name);
+                    console.log();
+                }
+            render(){
+                return (
+                    &lt;div&gt;
+                        {/*方法一：定义的是普通函数 bind绑定this*/}
+                        &lt;button onClick={this.show.bind(this)}&gt;点击显示1&lt;/button&gt;
+                        {/*方法二：定义的是箭头函数 this指向不丢失*/}
+                        &lt;button onClick={this.show2}&gt;点击显示2&lt;/button&gt;
+                        {/*方法三 事件触发的普通方法this丢失*/}
+                        {/*事件触发箭头函数this指向正常*/}
+                        &lt;button onClick={()=&gt;this.show()}&gt;点击显示3&lt;/button&gt;
+                    &lt;/div&gt;
+                )
+            }
+            // 一个作用域快写的方法都是平级的
+            // 箭头函数定义的方法 this的指向保持不丢失
+            show2=()=&gt;{
+                console.log(this.name);
+            }
+        }
+        ReactDOM.render(&lt;App/&gt;,document.getElementById(&quot;root&quot;))
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><h1 id="react-脚手架"><a href="#react-脚手架" class="header-anchor">#</a> React 脚手架</h1> <p>node 环境</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">node</span> -v
+</code></pre></div><blockquote><p>关于 node 版本 一般是根据公司的项目版本安装对应的版本</p></blockquote> <p>npm 命令</p> <p>npm 仓库源地址</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#检查地址</span>
+<span class="token function">npm</span> config get registry
+<span class="token comment">#修改为国内镜像源</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry http://registry.npm.taobao.org/
+</code></pre></div><h1 id="生成项目包"><a href="#生成项目包" class="header-anchor">#</a> 生成项目包</h1> <p>npx 临时安装包软件的相关依赖命令 使用完毕之后删除</p> <p>create-react-app react 脚手架</p> <p>reactpro 项目包的名称 自定义</p> <p>需要再哪儿生成项目 下载以下的命令即可</p> <div class="language-shell extra-class"><pre class="language-shell"><code>npx create-react-app reactpro
+</code></pre></div><p>以上命令执行完毕之后</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> reactpro
+<span class="token function">npm</span> start
+</code></pre></div><p>访问流程:</p> <ul><li>浏览器中输入<code>localhost:3000</code> localhost 本地域名 3000 服务占用的端口</li> <li>react 脚手架启动 3000 端口服务</li> <li>react 启动的服务默认访问的就是 public 目录下</li> <li>在<code>index.html</code>中找到<code>&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</code>挂在点</li> <li>webpack 运行在自动打包<code>index.js</code>和<code>index.html</code>里</li> <li>src/index.js 引入了 src</li></ul> <h2 id="状态"><a href="#状态" class="header-anchor">#</a> 状态:</h2> <p>React</p> <div class="language-react extra-class"><pre class="language-text"><code>// rcc快捷方式
+/**
+ * Vue 组件的数据存放在data 数据自动监听的  当数据发生改变会自动刷新DOM 如果数据很多 会创建大量的监听器 性能就会低一些
+ * React 需要的时候再去刷新DOM  没有自动监听器
+ * React 提供了两个方法操作组件的状态
+ * State 获取数据
+ * setState 设置修改数据 刷新DOM
+ * 微信小程序借鉴了React数据管理
+ */
+import React, { Component } from &quot;react&quot;;
+
+export default class App extends Component {
+  // state初始化
+  state = { num: 1 };
+  // +1方法
+  doAdd() {
+    // 修改state的数据
+    // sst快捷提示
+    this.setState({ num: this.state.num + 1 });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;{this.state.num}&lt;/h1&gt;
+        &lt;button onClick={this.doAdd.bind(this)}&gt;点击这里&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+</code></pre></div><h2 id="setstate"><a href="#setstate" class="header-anchor">#</a> setState</h2> <div class="language-react extra-class"><pre class="language-text"><code>import React, { Component } from &quot;react&quot;;
+
+export default class App extends Component {
+  // 普通成员属性
+  num = 1;
+  // 事件处理方法 num+1
+  doAdd = () =&gt; {
+    this.num++;
+    console.log(this.num);
+    // 使用setState刷新DOM值必须写入{}
+    this.setState({});
+  };
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;{this.num}&lt;/h1&gt;
+        &lt;button onClick={this.doAdd}&gt;点击加1&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+</code></pre></div><h2 id="setstate-具有异步性"><a href="#setstate-具有异步性" class="header-anchor">#</a> setState 具有异步性</h2> <div class="language-react extra-class"><pre class="language-text"><code>import React, { Component } from &quot;react&quot;;
+
+export default class App extends Component {
+  // 存储成state属性还是使用普通类成员
+  // 如果状态不需要渲染到DOM上，使用普通类成员属性
+  // 如果状态频繁发生改变需要修改渲染DOM 使用state
+  doChange() {
+    // sst快捷方式
+    // setState参数结构(参数1，参数2)
+    // 参数1：需要修改的state的数据 对象格式
+    // 参数2：回调方法 当DOM渲染完毕之后调用
+    // setState 修改state属性操作 是异步的 非阻塞  提高性能
+    // 如果业务操作中 有需求是需要修改state状态后操作的 这个操作就是需要卸载回调方法中
+    this.setState({ num: 100 }, () =&gt; {
+      console.log(&quot;页面渲染完毕num:&quot;, this.state.num);
+    });
+    // 修改后打印state值
+    console.log(&quot;num:&quot;, this.state.num);
+  }
+  state = { num: 1 };
+  render() {
+    return (
+      &lt;div&gt;
+        {/**这里的方法调用加() */}
+        {/**事件触发的方法 当事件触发时 在调用不加() */}
+        {/* &lt;button onClick={this.doChange}&gt;点击这里&lt;/button&gt; */}
+        {/* 箭头函数触发 事件触发箭头函数  箭头函数要立即调用普通函数方法 */}
+        &lt;button onClick={() =&gt; this.doChange()}&gt;点击这里&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+</code></pre></div><h2 id="样式使用"><a href="#样式使用" class="header-anchor">#</a> 样式使用</h2> <p>标签属性 style 行内样式</p> <p>属性 class</p> <div class="language-react extra-class"><pre class="language-text"><code>/**
+ * style 行内样式
+ */
+import React, { Component } from &quot;react&quot;;
+import &quot;./assets/App.css&quot;;
+export default class App extends Component {
+  size = 18;
+  // 练习：写一个按钮点击之后字体变大
+  // 分析：1.编写一个按钮并绑定点击事件
+  // 2.事件处理方法里 对size属性+1
+  // 3.刷新DOM
+  doChange() {
+    this.size++;
+    // 刷新DOM渲染页面
+    this.setState({});
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        {/* JS描述样式的方式 */}
+        &lt;div style={{ color: &quot;red&quot;, fontSize: this.size }}&gt;Hello React&lt;/div&gt;
+        &lt;button onClick={this.doChange.bind(this)}&gt;点击放大字体&lt;/button&gt;
+        &lt;div className=&quot;danger&quot;&gt;WEB2108&lt;/div&gt;
+        {/* 动态改变绑定的样式class 根据size变量 */}
+        {/* &lt;22 success  否则就是danger */}
+        &lt;div className={this.size &lt; 22 ? &quot;success&quot; : &quot;danger&quot;}&gt;WEB2108&lt;/div&gt;
+        {/* &lt;22 sucess; 22-25 warn;&gt;25 danger */}
+        {/* 如果再属性中写JS代码比较多的时，建议封装为方法 */}
+        {/* 只有事件触发的方法 调用不加() */}
+        &lt;div className={this.showClass()}&gt;WEB2108&lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+  showClass() {
+    // &lt;22 success;22-25 warn; &gt;25danger&gt;
+    if (this.size &lt; 22) return &quot;success&quot;;
+    if (this.size &gt; 25) return &quot;danger&quot;;
+    return &quot;warn&quot;;
+  }
+}
+
+</code></pre></div><h2 id="图片加载"><a href="#图片加载" class="header-anchor">#</a> 图片加载</h2> <div class="language-react extra-class"><pre class="language-text"><code>import React, { Component } from 'react'
+import mypng  from './assets/1.jpg'
+export default class App extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        {/* 远程地址 直接填写图片地址即可 */}
+        &lt;img src=&quot;https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png&quot; alt=&quot;&quot; /&gt;
+        {/* 本地图片 习惯放在/src/assets目录下 */}
+        {/* 方法一 使用require语法 .default后缀 现在版本可以不用写 */}
+        &lt;img src={require(&quot;./assets/1.jpg&quot;)} alt=&quot;&quot; /&gt;
+        {/* 方法二  import mypng时引入的别名变量名称 */}
+        &lt;img src={mypng} alt=&quot;&quot; /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+</code></pre></div><h2 id="条件渲染"><a href="#条件渲染" class="header-anchor">#</a> 条件渲染</h2> <div class="language-react extra-class"><pre class="language-text"><code>import React, { Component } from 'react'
+import './assets/App.css'
+export default class App extends Component {
+  score = 60
+  // delta 时表示变量的意思
+  changeScore(delta){
+    // 修改分数
+    // this.score = this.score+delta;
+    this.score +=delta
+    // 刷新DOM
+    this.setState({})
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h4&gt;当前分数为：{this.score}&lt;/h4&gt;
+        &lt;button onClick={this.changeScore.bind(this,-10)} disabled={this.score&lt;=0}&gt;-10分&lt;/button&gt;
+        &lt;button onClick={this.changeScore.bind(this,10)} disabled={this.score&gt;=100}&gt;+10分&lt;/button&gt;
+        {/* 如果分数大于等于60  则显示及格了  否则显示不及格 */}
+        {this.show()}
+
+      &lt;/div&gt;
+    )
+  }
+  show(){
+    if(this.score &gt;=60){
+      // 返回JSX语法 不要加引号  加了引号返回的就是字符串了
+      return &lt;div className='success'&gt;及格&lt;/div&gt;
+    }
+    else{
+      return &lt;div className='danger'&gt;不及格&lt;/div&gt;
+    }
+  }
+}
+
+</code></pre></div><h2 id="双向绑定"><a href="#双向绑定" class="header-anchor">#</a> 双向绑定</h2> <p>在表单元素中</p> <p>单项流数据：数据渲染到页面 DOM 上</p> <p>双向流数据：既满足单向流数据，又可以接收到用户输入的信息</p> <p>数据和页面时双向的</p> <p><code>数据&lt;=&gt;页面</code></p> <blockquote><p>vue 双向绑定<code>v-model</code>本质就是 v-bind v-on 结合的语法糖</p></blockquote> <div class="language-react extra-class"><pre class="language-text"><code>import React, { Component } from 'react'
+
+export default class App extends Component {
+  state = {name:'皮卡丘'}
+  _nameChange(e){
+    // e.target.value 文本框输入的值
+    console.log(e.target.value);
+    let name = e.target.value
+    this.setState({name})
+  }
+  render() {
+    // es6结构语法 后续调用为了更加方便一些
+    const {name} = this.state
+    return (
+      &lt;div&gt;
+        &lt;input type=&quot;text&quot; value={name} onChange={this._nameChange.bind(this)}/&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.dc354540.js" defer></script><script src="/assets/js/5.4a76941f.js" defer></script><script src="/assets/js/1.d393d5fa.js" defer></script><script src="/assets/js/137.20cce46f.js" defer></script>
+  </body>
+</html>

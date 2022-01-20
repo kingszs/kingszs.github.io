@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Markdown使用教程 | 派大星</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://pan.zealsay.com/blog/favicon.ico">
+    <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b0aae218897fa9d8a9f76e9a77e0b3c6";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="追逐目标的人">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.66b259ef.css" as="style"><link rel="preload" href="/assets/js/app.dc354540.js" as="script"><link rel="preload" href="/assets/js/5.4a76941f.js" as="script"><link rel="preload" href="/assets/js/1.d393d5fa.js" as="script"><link rel="preload" href="/assets/js/67.520608e3.js" as="script"><link rel="prefetch" href="/assets/js/10.e46ede23.js"><link rel="prefetch" href="/assets/js/100.baa0f63c.js"><link rel="prefetch" href="/assets/js/101.86701951.js"><link rel="prefetch" href="/assets/js/102.b4190078.js"><link rel="prefetch" href="/assets/js/103.f1cf5887.js"><link rel="prefetch" href="/assets/js/104.a63bd1e2.js"><link rel="prefetch" href="/assets/js/105.4667c6b5.js"><link rel="prefetch" href="/assets/js/106.1c979c4e.js"><link rel="prefetch" href="/assets/js/107.bd8c4b0a.js"><link rel="prefetch" href="/assets/js/108.6dc8addb.js"><link rel="prefetch" href="/assets/js/109.1ad91853.js"><link rel="prefetch" href="/assets/js/11.8261ebdc.js"><link rel="prefetch" href="/assets/js/110.af89de8a.js"><link rel="prefetch" href="/assets/js/111.697aefaa.js"><link rel="prefetch" href="/assets/js/112.67c2d282.js"><link rel="prefetch" href="/assets/js/113.dab0f7c0.js"><link rel="prefetch" href="/assets/js/114.4f87f007.js"><link rel="prefetch" href="/assets/js/115.16f8855f.js"><link rel="prefetch" href="/assets/js/116.14168e53.js"><link rel="prefetch" href="/assets/js/117.6654267c.js"><link rel="prefetch" href="/assets/js/118.1ccf7f63.js"><link rel="prefetch" href="/assets/js/119.cda1ecfc.js"><link rel="prefetch" href="/assets/js/12.89243a8a.js"><link rel="prefetch" href="/assets/js/120.964abe12.js"><link rel="prefetch" href="/assets/js/121.447afeec.js"><link rel="prefetch" href="/assets/js/122.4400c66f.js"><link rel="prefetch" href="/assets/js/123.7333fbb5.js"><link rel="prefetch" href="/assets/js/124.4e1e5d83.js"><link rel="prefetch" href="/assets/js/125.84a815d2.js"><link rel="prefetch" href="/assets/js/126.f6953f7c.js"><link rel="prefetch" href="/assets/js/127.5cf7ab43.js"><link rel="prefetch" href="/assets/js/128.7e139c47.js"><link rel="prefetch" href="/assets/js/129.157b5231.js"><link rel="prefetch" href="/assets/js/13.78b93ffa.js"><link rel="prefetch" href="/assets/js/130.da81a8d0.js"><link rel="prefetch" href="/assets/js/131.952c499e.js"><link rel="prefetch" href="/assets/js/132.f24bd10f.js"><link rel="prefetch" href="/assets/js/133.49e32e51.js"><link rel="prefetch" href="/assets/js/134.711cfa6e.js"><link rel="prefetch" href="/assets/js/135.8aa19670.js"><link rel="prefetch" href="/assets/js/136.51e97ea8.js"><link rel="prefetch" href="/assets/js/137.20cce46f.js"><link rel="prefetch" href="/assets/js/138.9d95ccdf.js"><link rel="prefetch" href="/assets/js/139.fe1fe9aa.js"><link rel="prefetch" href="/assets/js/14.f2551251.js"><link rel="prefetch" href="/assets/js/140.807217a8.js"><link rel="prefetch" href="/assets/js/141.5fce4892.js"><link rel="prefetch" href="/assets/js/142.fd6252e0.js"><link rel="prefetch" href="/assets/js/143.2e475d5c.js"><link rel="prefetch" href="/assets/js/144.5160914c.js"><link rel="prefetch" href="/assets/js/145.7d323e96.js"><link rel="prefetch" href="/assets/js/146.1030207b.js"><link rel="prefetch" href="/assets/js/147.c2f71711.js"><link rel="prefetch" href="/assets/js/148.b69fc63e.js"><link rel="prefetch" href="/assets/js/149.1bb9d3d3.js"><link rel="prefetch" href="/assets/js/15.46207edd.js"><link rel="prefetch" href="/assets/js/150.d9aac19b.js"><link rel="prefetch" href="/assets/js/151.07a17ce0.js"><link rel="prefetch" href="/assets/js/152.73a68196.js"><link rel="prefetch" href="/assets/js/153.0d79b837.js"><link rel="prefetch" href="/assets/js/154.2cfe2073.js"><link rel="prefetch" href="/assets/js/155.32217503.js"><link rel="prefetch" href="/assets/js/156.201bb801.js"><link rel="prefetch" href="/assets/js/157.09298989.js"><link rel="prefetch" href="/assets/js/158.cb785f40.js"><link rel="prefetch" href="/assets/js/159.25706958.js"><link rel="prefetch" href="/assets/js/16.79012710.js"><link rel="prefetch" href="/assets/js/160.cc7f6b12.js"><link rel="prefetch" href="/assets/js/161.9a5d76e3.js"><link rel="prefetch" href="/assets/js/162.0be38a36.js"><link rel="prefetch" href="/assets/js/163.43e49338.js"><link rel="prefetch" href="/assets/js/164.d1029618.js"><link rel="prefetch" href="/assets/js/165.230c5023.js"><link rel="prefetch" href="/assets/js/166.91d35f5f.js"><link rel="prefetch" href="/assets/js/167.1ab59e5a.js"><link rel="prefetch" href="/assets/js/168.965d615e.js"><link rel="prefetch" href="/assets/js/169.087dc7b3.js"><link rel="prefetch" href="/assets/js/17.788583ce.js"><link rel="prefetch" href="/assets/js/170.1f51d0c2.js"><link rel="prefetch" href="/assets/js/171.4a94ca24.js"><link rel="prefetch" href="/assets/js/172.64467f96.js"><link rel="prefetch" href="/assets/js/173.1aafa815.js"><link rel="prefetch" href="/assets/js/174.d72e1d41.js"><link rel="prefetch" href="/assets/js/175.dbe588f1.js"><link rel="prefetch" href="/assets/js/176.b28e5a8b.js"><link rel="prefetch" href="/assets/js/177.e2ffcefe.js"><link rel="prefetch" href="/assets/js/178.2653dac4.js"><link rel="prefetch" href="/assets/js/179.3cf49903.js"><link rel="prefetch" href="/assets/js/18.84be972a.js"><link rel="prefetch" href="/assets/js/180.b0ad9005.js"><link rel="prefetch" href="/assets/js/181.0a38c35f.js"><link rel="prefetch" href="/assets/js/182.899b0187.js"><link rel="prefetch" href="/assets/js/183.b956ad20.js"><link rel="prefetch" href="/assets/js/184.44fa9ac6.js"><link rel="prefetch" href="/assets/js/185.976c2c60.js"><link rel="prefetch" href="/assets/js/186.5af784b4.js"><link rel="prefetch" href="/assets/js/187.989c86cc.js"><link rel="prefetch" href="/assets/js/188.f9bd43e2.js"><link rel="prefetch" href="/assets/js/189.c448c6d3.js"><link rel="prefetch" href="/assets/js/19.b63ddcf4.js"><link rel="prefetch" href="/assets/js/190.8cef9d97.js"><link rel="prefetch" href="/assets/js/191.f59632ce.js"><link rel="prefetch" href="/assets/js/192.d3c9b2a2.js"><link rel="prefetch" href="/assets/js/193.a85c48cc.js"><link rel="prefetch" href="/assets/js/194.14e12c98.js"><link rel="prefetch" href="/assets/js/195.2584a376.js"><link rel="prefetch" href="/assets/js/196.ce6d4ce0.js"><link rel="prefetch" href="/assets/js/197.1b6ec0e6.js"><link rel="prefetch" href="/assets/js/198.c4df111c.js"><link rel="prefetch" href="/assets/js/199.6c4027a9.js"><link rel="prefetch" href="/assets/js/20.658ac3f6.js"><link rel="prefetch" href="/assets/js/200.605d9505.js"><link rel="prefetch" href="/assets/js/201.7a4dde66.js"><link rel="prefetch" href="/assets/js/202.792310e0.js"><link rel="prefetch" href="/assets/js/203.9708b626.js"><link rel="prefetch" href="/assets/js/204.74b2cf23.js"><link rel="prefetch" href="/assets/js/205.41ecfc1d.js"><link rel="prefetch" href="/assets/js/206.1c18dadb.js"><link rel="prefetch" href="/assets/js/207.868a8965.js"><link rel="prefetch" href="/assets/js/208.1c55f2b1.js"><link rel="prefetch" href="/assets/js/209.a5988f51.js"><link rel="prefetch" href="/assets/js/21.7ec90894.js"><link rel="prefetch" href="/assets/js/210.e721f198.js"><link rel="prefetch" href="/assets/js/211.f1d32bc1.js"><link rel="prefetch" href="/assets/js/212.2782b9ad.js"><link rel="prefetch" href="/assets/js/213.314f78e0.js"><link rel="prefetch" href="/assets/js/214.c7afce7a.js"><link rel="prefetch" href="/assets/js/215.552a2114.js"><link rel="prefetch" href="/assets/js/216.c6ab8bac.js"><link rel="prefetch" href="/assets/js/217.be20c0ed.js"><link rel="prefetch" href="/assets/js/218.1fd92ca0.js"><link rel="prefetch" href="/assets/js/219.99a3f2aa.js"><link rel="prefetch" href="/assets/js/22.eb8c0ada.js"><link rel="prefetch" href="/assets/js/220.a74ae108.js"><link rel="prefetch" href="/assets/js/221.d1526b18.js"><link rel="prefetch" href="/assets/js/222.bc590c25.js"><link rel="prefetch" href="/assets/js/223.ec10b8d0.js"><link rel="prefetch" href="/assets/js/224.c0a4d5ea.js"><link rel="prefetch" href="/assets/js/225.1cf7511f.js"><link rel="prefetch" href="/assets/js/226.5e7078ba.js"><link rel="prefetch" href="/assets/js/227.ad91b5f7.js"><link rel="prefetch" href="/assets/js/228.6cfc93f5.js"><link rel="prefetch" href="/assets/js/229.c97c767a.js"><link rel="prefetch" href="/assets/js/23.a8943735.js"><link rel="prefetch" href="/assets/js/230.21b65feb.js"><link rel="prefetch" href="/assets/js/231.df72e780.js"><link rel="prefetch" href="/assets/js/232.493720f5.js"><link rel="prefetch" href="/assets/js/233.965fd9da.js"><link rel="prefetch" href="/assets/js/234.4345f0b0.js"><link rel="prefetch" href="/assets/js/235.8103bbb4.js"><link rel="prefetch" href="/assets/js/236.5ad07565.js"><link rel="prefetch" href="/assets/js/237.6127271d.js"><link rel="prefetch" href="/assets/js/238.7253f9b2.js"><link rel="prefetch" href="/assets/js/239.1f5383b7.js"><link rel="prefetch" href="/assets/js/24.b263a917.js"><link rel="prefetch" href="/assets/js/240.463e34f8.js"><link rel="prefetch" href="/assets/js/241.8a5fc2d2.js"><link rel="prefetch" href="/assets/js/242.2f36965d.js"><link rel="prefetch" href="/assets/js/243.a3a8572c.js"><link rel="prefetch" href="/assets/js/244.e0e626ce.js"><link rel="prefetch" href="/assets/js/245.f1dc0764.js"><link rel="prefetch" href="/assets/js/246.3c39b2fa.js"><link rel="prefetch" href="/assets/js/247.5802cfd8.js"><link rel="prefetch" href="/assets/js/248.ddef8464.js"><link rel="prefetch" href="/assets/js/249.6a4ef8ba.js"><link rel="prefetch" href="/assets/js/25.52e40195.js"><link rel="prefetch" href="/assets/js/250.15481e6f.js"><link rel="prefetch" href="/assets/js/251.a7220300.js"><link rel="prefetch" href="/assets/js/252.abcb0a89.js"><link rel="prefetch" href="/assets/js/253.bb12b283.js"><link rel="prefetch" href="/assets/js/254.1f5051aa.js"><link rel="prefetch" href="/assets/js/255.7869a245.js"><link rel="prefetch" href="/assets/js/256.21b9282f.js"><link rel="prefetch" href="/assets/js/257.90c0afe1.js"><link rel="prefetch" href="/assets/js/258.643020d0.js"><link rel="prefetch" href="/assets/js/259.5fe9ed6e.js"><link rel="prefetch" href="/assets/js/26.565c0ade.js"><link rel="prefetch" href="/assets/js/260.7eddc292.js"><link rel="prefetch" href="/assets/js/261.f321b0b1.js"><link rel="prefetch" href="/assets/js/262.8fbf5f36.js"><link rel="prefetch" href="/assets/js/263.f98b49da.js"><link rel="prefetch" href="/assets/js/264.e25cb29d.js"><link rel="prefetch" href="/assets/js/265.f89c5e00.js"><link rel="prefetch" href="/assets/js/266.34c45519.js"><link rel="prefetch" href="/assets/js/267.1793917f.js"><link rel="prefetch" href="/assets/js/268.0a2b7f57.js"><link rel="prefetch" href="/assets/js/269.a36eb714.js"><link rel="prefetch" href="/assets/js/27.7f50fe6a.js"><link rel="prefetch" href="/assets/js/270.8d8ec855.js"><link rel="prefetch" href="/assets/js/271.69ea5461.js"><link rel="prefetch" href="/assets/js/272.a88553e6.js"><link rel="prefetch" href="/assets/js/273.757eec12.js"><link rel="prefetch" href="/assets/js/274.5a3d8dbf.js"><link rel="prefetch" href="/assets/js/275.4aa2667f.js"><link rel="prefetch" href="/assets/js/276.06475254.js"><link rel="prefetch" href="/assets/js/277.9f54c560.js"><link rel="prefetch" href="/assets/js/278.49c48cb7.js"><link rel="prefetch" href="/assets/js/279.87469112.js"><link rel="prefetch" href="/assets/js/28.4f20fbbe.js"><link rel="prefetch" href="/assets/js/280.858032df.js"><link rel="prefetch" href="/assets/js/281.13402888.js"><link rel="prefetch" href="/assets/js/282.65c901c9.js"><link rel="prefetch" href="/assets/js/283.702cdc2f.js"><link rel="prefetch" href="/assets/js/284.01002b10.js"><link rel="prefetch" href="/assets/js/285.00fc4de4.js"><link rel="prefetch" href="/assets/js/286.1a84c013.js"><link rel="prefetch" href="/assets/js/287.3fc44a48.js"><link rel="prefetch" href="/assets/js/288.da5cb031.js"><link rel="prefetch" href="/assets/js/289.5852b8a9.js"><link rel="prefetch" href="/assets/js/29.2b32a5d6.js"><link rel="prefetch" href="/assets/js/290.ac2b31e1.js"><link rel="prefetch" href="/assets/js/291.89630793.js"><link rel="prefetch" href="/assets/js/292.95912971.js"><link rel="prefetch" href="/assets/js/293.20ab7b70.js"><link rel="prefetch" href="/assets/js/294.cabe7aa2.js"><link rel="prefetch" href="/assets/js/295.e488c1c3.js"><link rel="prefetch" href="/assets/js/296.70b8075a.js"><link rel="prefetch" href="/assets/js/297.9a49b786.js"><link rel="prefetch" href="/assets/js/298.99806246.js"><link rel="prefetch" href="/assets/js/299.d6b5ee58.js"><link rel="prefetch" href="/assets/js/3.a35f25f6.js"><link rel="prefetch" href="/assets/js/30.d75e5122.js"><link rel="prefetch" href="/assets/js/300.b699992f.js"><link rel="prefetch" href="/assets/js/301.6634171c.js"><link rel="prefetch" href="/assets/js/31.92755125.js"><link rel="prefetch" href="/assets/js/32.bbd6a004.js"><link rel="prefetch" href="/assets/js/33.4bbdceb6.js"><link rel="prefetch" href="/assets/js/34.dd87f46a.js"><link rel="prefetch" href="/assets/js/35.7ef1a75b.js"><link rel="prefetch" href="/assets/js/36.528aff8d.js"><link rel="prefetch" href="/assets/js/37.d21c6653.js"><link rel="prefetch" href="/assets/js/38.6ca18961.js"><link rel="prefetch" href="/assets/js/39.1ee7f3a5.js"><link rel="prefetch" href="/assets/js/4.b5ab30cb.js"><link rel="prefetch" href="/assets/js/40.0b3c147d.js"><link rel="prefetch" href="/assets/js/41.889fe914.js"><link rel="prefetch" href="/assets/js/42.fde0e7fa.js"><link rel="prefetch" href="/assets/js/43.37463413.js"><link rel="prefetch" href="/assets/js/44.e96735da.js"><link rel="prefetch" href="/assets/js/45.257d6aa5.js"><link rel="prefetch" href="/assets/js/46.f2e5805c.js"><link rel="prefetch" href="/assets/js/47.30be892a.js"><link rel="prefetch" href="/assets/js/48.92a33d06.js"><link rel="prefetch" href="/assets/js/49.560bb113.js"><link rel="prefetch" href="/assets/js/50.bf770a36.js"><link rel="prefetch" href="/assets/js/51.64bc002d.js"><link rel="prefetch" href="/assets/js/52.caf93e54.js"><link rel="prefetch" href="/assets/js/53.e583026f.js"><link rel="prefetch" href="/assets/js/54.5b7209b3.js"><link rel="prefetch" href="/assets/js/55.42843b6c.js"><link rel="prefetch" href="/assets/js/56.2326c6a8.js"><link rel="prefetch" href="/assets/js/57.311d9734.js"><link rel="prefetch" href="/assets/js/58.3fe66f57.js"><link rel="prefetch" href="/assets/js/59.3bc9d853.js"><link rel="prefetch" href="/assets/js/6.f1ba0f6c.js"><link rel="prefetch" href="/assets/js/60.21ab5134.js"><link rel="prefetch" href="/assets/js/61.6cd17b88.js"><link rel="prefetch" href="/assets/js/62.2d8caca8.js"><link rel="prefetch" href="/assets/js/63.15d448f1.js"><link rel="prefetch" href="/assets/js/64.1ae9ffb4.js"><link rel="prefetch" href="/assets/js/65.7ab139b2.js"><link rel="prefetch" href="/assets/js/66.4c19025a.js"><link rel="prefetch" href="/assets/js/68.1d05086e.js"><link rel="prefetch" href="/assets/js/69.7b471079.js"><link rel="prefetch" href="/assets/js/7.7909dcc5.js"><link rel="prefetch" href="/assets/js/70.9d941bdb.js"><link rel="prefetch" href="/assets/js/71.47d4f736.js"><link rel="prefetch" href="/assets/js/72.0227d79a.js"><link rel="prefetch" href="/assets/js/73.13106822.js"><link rel="prefetch" href="/assets/js/74.7410b827.js"><link rel="prefetch" href="/assets/js/75.0ce9f321.js"><link rel="prefetch" href="/assets/js/76.3c1626a1.js"><link rel="prefetch" href="/assets/js/77.b4a66734.js"><link rel="prefetch" href="/assets/js/78.b02fefed.js"><link rel="prefetch" href="/assets/js/79.4739636c.js"><link rel="prefetch" href="/assets/js/8.ac8ea0a8.js"><link rel="prefetch" href="/assets/js/80.6ca8668a.js"><link rel="prefetch" href="/assets/js/81.a354ff71.js"><link rel="prefetch" href="/assets/js/82.19e66ca0.js"><link rel="prefetch" href="/assets/js/83.1481b77b.js"><link rel="prefetch" href="/assets/js/84.2240c05e.js"><link rel="prefetch" href="/assets/js/85.b137652e.js"><link rel="prefetch" href="/assets/js/86.407cdc7a.js"><link rel="prefetch" href="/assets/js/87.702fa884.js"><link rel="prefetch" href="/assets/js/88.c1d91815.js"><link rel="prefetch" href="/assets/js/89.5dd1083f.js"><link rel="prefetch" href="/assets/js/9.d0bdf35d.js"><link rel="prefetch" href="/assets/js/90.9a81466f.js"><link rel="prefetch" href="/assets/js/91.7102ade8.js"><link rel="prefetch" href="/assets/js/92.23444b97.js"><link rel="prefetch" href="/assets/js/93.25cf8a37.js"><link rel="prefetch" href="/assets/js/94.41ccc029.js"><link rel="prefetch" href="/assets/js/95.f829b83b.js"><link rel="prefetch" href="/assets/js/96.377c4b9c.js"><link rel="prefetch" href="/assets/js/97.3064607a.js"><link rel="prefetch" href="/assets/js/98.9fdd36f5.js"><link rel="prefetch" href="/assets/js/99.13cebe9e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.66b259ef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-b51f5500><div data-v-b51f5500><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-b51f5500 data-v-b51f5500><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-5cb9a64e data-v-b51f5500 data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>派大星</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-b51f5500><div data-v-b51f5500><div id="smart" class="wrapper-page" style="background-image:url(https://pan.zealsay.com/zealsay/cover/4.jpg);background-position-x:center;background-position-y:center;background-size:cover;background-repeat-x:no-repeat;background-repeat-y:no-repeat;" data-v-b51f5500><header class="navbar" data-v-b51f5500><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="派大星" class="logo"> <span class="site-name">派大星</span></a> <div class="links"><div id="dayNightSwitch" class="generalWrapper" data-v-32f44868><a class="click" data-v-32f44868><div class="onOff daySwitch" data-v-32f44868><div class="star star1" data-v-32f44868></div> <div class="star star2" data-v-32f44868></div> <div class="star star3" data-v-32f44868></div> <div class="star star4" data-v-32f44868></div> <div class="star star5" data-v-32f44868></div> <div class="star sky" data-v-32f44868></div> <div class="sunMoon" data-v-32f44868><div class="crater crater1" data-v-32f44868></div> <div class="crater crater2" data-v-32f44868></div> <div class="crater crater3" data-v-32f44868></div> <div class="cloud part1" data-v-32f44868></div> <div class="cloud part2" data-v-32f44868></div></div></div></a></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-b51f5500></div> <aside class="sidebar" data-v-b51f5500><div class="personal-info-wrapper" data-v-03833281 data-v-b51f5500><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-03833281> <h3 class="name" data-v-03833281>
+    派大星
+  </h3> <div class="num" data-v-03833281><div data-v-03833281><h3 data-v-03833281>272</h3> <h6 data-v-03833281>文章</h6></div> <div data-v-03833281><h3 data-v-03833281>69</h3> <h6 data-v-03833281>标签</h6></div></div> <hr data-v-03833281></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript文章/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript文章
+</a></li><li class="dropdown-item"><!----> <a href="/categories/三级目录/" class="nav-link"><i class="iconfont undefined"></i>
+  三级目录
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/页面/" class="nav-link"><i class="iconfont undefined"></i>
+  页面
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术/" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术文档/" class="nav-link"><i class="iconfont undefined"></i>
+  技术文档
+</a></li><li class="dropdown-item"><!----> <a href="/categories/技术笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  技术笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用工具/" class="nav-link"><i class="iconfont undefined"></i>
+  实用工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GitHub技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  GitHub技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/更多/" class="nav-link"><i class="iconfont undefined"></i>
+  更多
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="iconfont undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/心情杂货/" class="nav-link"><i class="iconfont undefined"></i>
+  心情杂货
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/实用技巧/" class="nav-link"><i class="iconfont undefined"></i>
+  实用技巧
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器&amp;网络/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器&amp;网络
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端框架/" class="nav-link"><i class="iconfont undefined"></i>
+  前端框架
+</a></li><li class="dropdown-item"><!----> <a href="/categories/资源工具/" class="nav-link"><i class="iconfont undefined"></i>
+  资源工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/持续集成/" class="nav-link"><i class="iconfont undefined"></i>
+  持续集成
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="iconfont undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React/" class="nav-link"><i class="iconfont undefined"></i>
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《ES6 教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《ES6 教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Git》学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Git》学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《JavaScript教程》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《JavaScript教程》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《React》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《React》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/核心概念/" class="nav-link"><i class="iconfont undefined"></i>
+  核心概念
+</a></li><li class="dropdown-item"><!----> <a href="/categories/高级指引/" class="nav-link"><i class="iconfont undefined"></i>
+  高级指引
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Hook/" class="nav-link"><i class="iconfont undefined"></i>
+  Hook
+</a></li><li class="dropdown-item"><!----> <a href="/categories/案例演示/" class="nav-link"><i class="iconfont undefined"></i>
+  案例演示
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《TypeScript 从零实现 axios》/" class="nav-link"><i class="iconfont undefined"></i>
+  《TypeScript 从零实现 axios》
+</a></li><li class="dropdown-item"><!----> <a href="/categories/初识 TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  初识 TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TypeScript 常用语法/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript 常用语法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 项目初始化/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 项目初始化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 基础功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 基础功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 异常情况处理/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 异常情况处理
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 接口扩展/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 接口扩展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 拦截器实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 拦截器实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 配置化实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 配置化实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 取消功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 取消功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 更多功能实现/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 更多功能实现
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 单元测试/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ts-axios 部署与发布/" class="nav-link"><i class="iconfont undefined"></i>
+  ts-axios 部署与发布
+</a></li><li class="dropdown-item"><!----> <a href="/categories/《Vue》笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  《Vue》笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/基础/" class="nav-link"><i class="iconfont undefined"></i>
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/组件/" class="nav-link"><i class="iconfont undefined"></i>
+  组件
+</a></li><li class="dropdown-item"><!----> <a href="/categories/过渡&amp;动画/" class="nav-link"><i class="iconfont undefined"></i>
+  过渡&amp;动画
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规模化/" class="nav-link"><i class="iconfont undefined"></i>
+  规模化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可复用性&amp;组合/" class="nav-link"><i class="iconfont undefined"></i>
+  可复用性&amp;组合
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vuex/" class="nav-link"><i class="iconfont undefined"></i>
+  Vuex
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-5cb9a64e data-v-b51f5500><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>Markdown使用教程</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>派大星</span>
+            
+          <span data-v-5cb9a64e>2021 - </span>
+          2022
+        </a></span></div></div></div> <div data-v-b51f5500><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">Markdown使用教程</h1> <div class="page-info" data-v-0efa1f05><i class="iconfont reco-account" data-v-0efa1f05><span data-v-0efa1f05>{
+  &quot;name&quot;: &quot;xugaoyi&quot;,
+  &quot;link&quot;: &quot;https://github.com/xugaoyi&quot;
+}</span></i> <i class="iconfont reco-date" data-v-0efa1f05><span data-v-0efa1f05>2019-12-25 14:27:01</span></i> <i class="iconfont reco-eye" data-v-0efa1f05><span id="/pages/ad247c4332211551/" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-0efa1f05><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-0efa1f05><span class="tag-item" data-v-0efa1f05></span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="markdown使用教程"><a href="#markdown使用教程" class="header-anchor">#</a> Markdown使用教程</h1> <h2 id="一、markdown"><a href="#一、markdown" class="header-anchor">#</a> 一、Markdown</h2> <h3 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h3> <p><img src="https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png" alt="logo"></p> <p><code>Markdown</code> 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p> <h3 id="应用"><a href="#应用" class="header-anchor">#</a> 应用</h3> <p>当前许多网站都广泛使用 <code>Markdown</code> 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、知乎等</p> <h3 id="编辑器"><a href="#编辑器" class="header-anchor">#</a> 编辑器</h3> <p>推荐使用<code>Typora</code>，官网：<a href="https://typora.io/" target="_blank" rel="noopener noreferrer">https://typora.io/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="二、徽章"><a href="#二、徽章" class="header-anchor">#</a> 二、徽章</h2> <h4 id="什么是徽章"><a href="#什么是徽章" class="header-anchor">#</a> 什么是徽章</h4> <p>徽章是一种小巧精美的小图标，一般配有相关文字进行辅助说明，可对数据进行监控，链接跳转等，富有表现力。</p> <p>常见于<code>github</code>项目主页，但其不仅出现于 <code>github</code> 项目主页，凡是能够表现图片的地方都可以出现徽章。</p> <h4 id="徽章的使用"><a href="#徽章的使用" class="header-anchor">#</a> 徽章的使用</h4> <ul><li>在<code>markdown</code>中使用</li></ul> <div class="language-markdown extra-class"><pre class="language-markdown"><code>格式:
+<span class="token url">[<span class="token content">![图片文字说明</span>](<span class="token url">图片源地址</span>)</span>](超链接地址)  # 即超链接内部嵌套图片
+
+语法：
+<span class="token url">[<span class="token content">![github</span>](<span class="token url">https://img.shields.io/badge/github-xugaoyi-brightgreen.svg</span>)</span>](https://github.com/xugaoyi)
+</code></pre></div><p><a href="https://github.com/xugaoyi" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/github-xugaoyi-brightgreen.svg" alt="github"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>徽章生成网站：<a href="https://shields.io/" target="_blank" rel="noopener noreferrer">https://shields.io/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>本文档主要介绍markdown，不对徽章做过多介绍，详细介绍请 <a href="https://segmentfault.com/a/1190000019552597" target="_blank" rel="noopener noreferrer"> 戳我 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 了解。</p> <h2 id="三、设置目录"><a href="#三、设置目录" class="header-anchor">#</a> 三、设置目录</h2> <p>设置之后会根据分级标题来自动生成目录。</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>[TOC]
+</code></pre></div><blockquote><p>注：github暂未支持。</p></blockquote> <p>[TOC]</p> <p>在github生成TOC的方法：<a href="https://github.com/ekalinin/github-markdown-toc" target="_blank" rel="noopener noreferrer">https://github.com/ekalinin/github-markdown-toc<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>windows系统需要基于golang实现的工具：https://github.com/ekalinin/github-markdown-toc.go</p> <blockquote><p>如果你有GO语言的编译环境，可以尝试自己编译，如果没有，可以直接下载编译好的二进制文件。</p> <p>如windows系统64位 下载：gh-md-toc.windows.amd64.tgz （386 是32位，amd64是64位）</p> <p>下载解压后，发现没有后缀名无法识别，实际上这是个exe文件，所以只需要暴力地在后面加上.exe就可以开始愉快使用了。</p> <p>使用方法：</p> <ol><li>首先将.md文档复制到gh-md-toc.exe的根目录下</li> <li>在该目录下打开系统命令行，输入命令：gh-md-toc.exe README.MD 生成目录</li> <li>把生成的目录复制到.md文件即可。</li></ol></blockquote> <p><strong>这是gh-md-toc生成的目录：</strong></p> <ul><li><a href="#%E4%B8%80markdown">一、Markdown</a> <ul><li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li> <li><a href="#%E5%BA%94%E7%94%A8">应用</a></li> <li><a href="#%E7%BC%96%E8%BE%91%E5%99%A8">编辑器</a></li></ul></li> <li><a href="#%E4%BA%8C%E5%BE%BD%E7%AB%A0">二、徽章</a> <ul><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%BD%E7%AB%A0">什么是徽章</a></li> <li><a href="#%E5%BE%BD%E7%AB%A0%E7%9A%84%E4%BD%BF%E7%94%A8">徽章的使用</a></li></ul></li> <li><a href="#%E4%B8%89%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95">三、设置目录</a></li> <li><a href="#%E5%9B%9B%E6%A0%87%E9%A2%98">四、标题</a></li> <li><a href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">一级标题</a> <ul><li><a href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98">二级标题</a> <ul><li><a href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98">三级标题</a> <ul><li><a href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98">四级标题</a> <ul><li><a href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98">五级标题</a> <ul><li><a href="#%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98">六级标题</a></li></ul></li></ul></li></ul></li></ul></li> <li><a href="#%E4%BA%94%E6%96%87%E6%9C%AC">五、文本</a> <ul><li><a href="#%E6%AE%B5%E8%90%BD">段落</a></li> <li><a href="#%E5%AD%97%E4%BD%93">字体</a></li> <li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li> <li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li> <li><a href="#%E6%96%87%E5%AD%97%E9%AB%98%E4%BA%AE">文字高亮</a></li> <li><a href="#%E5%88%86%E9%9A%94%E7%BA%BF">分隔线</a></li> <li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li></ul></li> <li><a href="#%E5%85%AD%E5%88%97%E8%A1%A8">六、列表</a> <ul><li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li> <li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li> <li><a href="#%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8">折叠列表</a></li> <li><a href="#%E5%B8%A6%E5%A4%8D%E9%80%89%E6%A1%86%E5%88%97%E8%A1%A8">带复选框列表</a></li> <li><a href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97">列表嵌套</a></li></ul></li> <li><a href="#%E4%B8%83%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8">七、区块引用</a> <ul><li><a href="#%E5%8C%BA%E5%9D%97%E5%B5%8C%E5%A5%97">区块嵌套</a></li> <li><a href="#%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8">区块中使用列表</a></li> <li><a href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97">列表中使用区块</a></li></ul></li> <li><a href="#%E5%85%AB%E4%BB%A3%E7%A0%81">八、代码</a> <ul><li><a href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97">代码区块</a></li></ul></li> <li><a href="#%E4%B9%9D%E9%93%BE%E6%8E%A5">九、链接</a> <ul><li><a href="#%E5%8F%98%E9%87%8F%E9%93%BE%E6%8E%A5">变量链接</a></li> <li><a href="#github%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%86%85%E9%83%A8%E9%93%BE%E6%8E%A5">Github中使用内部链接</a></li> <li><a href="#%E9%94%9A%E7%82%B9%E9%93%BE%E6%8E%A5">锚点链接</a></li></ul></li> <li><a href="#%E5%8D%81%E5%9B%BE%E7%89%87">十、图片</a> <ul><li><a href="#%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98">图片宽高</a></li> <li><a href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%BB%A5%E5%8F%8Agithub%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87">相对路径以及Github中使用图片</a></li></ul></li> <li><a href="#%E5%8D%81%E4%B8%80%E8%A1%A8%E6%A0%BC">十一、表格</a></li> <li><a href="#%E5%8D%81%E4%BA%8Cemoji%E8%A1%A8%E6%83%85%E5%8C%85">十二、Emoji表情包</a></li> <li><a href="#%E5%8D%81%E4%B8%89%E5%85%B6%E4%BB%96%E6%8A%80%E5%B7%A7">十三、其他技巧</a> <ul><li><a href="#%E6%94%AF%E6%8C%81%E7%9A%84-html-%E5%85%83%E7%B4%A0">支持的 HTML 元素</a></li> <li><a href="#%E8%BD%AC%E4%B9%89">转义</a></li> <li><a href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">数学公式</a></li> <li><a href="#%E5%9B%BE%E8%A1%A8">图表</a></li> <li><a href="#%E6%B5%81%E7%A8%8B%E5%9B%BE">流程图</a></li> <li><a href="#%E6%97%B6%E5%BA%8F%E5%9B%BE">时序图</a></li> <li><a href="#%E7%94%98%E7%89%B9%E5%9B%BE">甘特图</a></li></ul></li></ul></li></ul> <h2 id="四、标题"><a href="#四、标题" class="header-anchor">#</a> 四、标题</h2> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题</span>
+<span class="token title important"><span class="token punctuation">#####</span> 五级标题</span>
+<span class="token title important"><span class="token punctuation">######</span> 六级标题</span>
+</code></pre></div><h1 id="一级标题"><a href="#一级标题" class="header-anchor">#</a> 一级标题</h1> <h2 id="二级标题"><a href="#二级标题" class="header-anchor">#</a> 二级标题</h2> <h3 id="三级标题"><a href="#三级标题" class="header-anchor">#</a> 三级标题</h3> <h4 id="四级标题"><a href="#四级标题" class="header-anchor">#</a> 四级标题</h4> <h5 id="五级标题"><a href="#五级标题" class="header-anchor">#</a> 五级标题</h5> <h6 id="六级标题"><a href="#六级标题" class="header-anchor">#</a> 六级标题</h6> <h2 id="五、文本"><a href="#五、文本" class="header-anchor">#</a> 五、文本</h2> <h3 id="段落"><a href="#段落" class="header-anchor">#</a> 段落</h3> <p>Markdown 段落没有特殊的格式，直接编写文字，<strong>需要段落缩进时使用2个Tab</strong></p> <h3 id="字体"><a href="#字体" class="header-anchor">#</a> 字体</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文本</span><span class="token punctuation">*</span></span>
+或 <span class="token italic"><span class="token punctuation">_</span><span class="token content">斜体文本</span><span class="token punctuation">_</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">粗体文本</span><span class="token punctuation">**</span></span>
+或  <span class="token bold"><span class="token punctuation">__</span><span class="token content">粗体文本</span><span class="token punctuation">__</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">粗斜体文本</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span>
+或 <span class="token bold"><span class="token punctuation">__</span><span class="token content"><span class="token italic"><span class="token punctuation">_</span><span class="token content">粗斜体文本</span><span class="token punctuation">_</span></span></span><span class="token punctuation">__</span></span>
+</code></pre></div><p><em>斜体文本</em></p> <p><em>斜体文本</em></p> <p><strong>粗体文本</strong></p> <p><strong>粗体文本</strong></p> <p><em><strong>粗斜体文本</strong></em></p> <p><em><strong>粗斜体文本</strong></em></p> <h3 id="删除线"><a href="#删除线" class="header-anchor">#</a> 删除线</h3> <p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 <strong>~~</strong> 即可，实例如下：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token strike"><span class="token punctuation">~~</span><span class="token content">BAIDU.COM</span><span class="token punctuation">~~</span></span>
+</code></pre></div><p><s>BAIDU.COM</s></p> <h3 id="下划线"><a href="#下划线" class="header-anchor">#</a> 下划线</h3> <p>下划线可以通过 HTML 的<code>&lt;u&gt;</code> 标签来实现：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">&gt;</span></span>带下划线的文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><u>带下划线的文本</u></p> <h3 id="文字高亮"><a href="#文字高亮" class="header-anchor">#</a> 文字高亮</h3> <p>文字高亮能使行内部分文字高亮，使用一对反引号。</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token code-snippet code keyword">`html`</span> <span class="token code-snippet code keyword">`css`</span> <span class="token code-snippet code keyword">`javascript`</span>
+</code></pre></div><p><code>html</code> <code>css</code> <code>javascript</code></p> <h3 id="分隔线"><a href="#分隔线" class="header-anchor">#</a> 分隔线</h3> <p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token hr punctuation">***</span>
+
+<span class="token hr punctuation">*****</span>
+
+<span class="token hr punctuation">- - -</span>
+
+<span class="token hr punctuation">----------</span>
+</code></pre></div><hr> <h3 id="脚注"><a href="#脚注" class="header-anchor">#</a> 脚注</h3> <p>脚注是对文本的补充说明。</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>[^变量]
+在文档结尾或其他位置給变量赋值：
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">^变量</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 注明框内显示的内容</span>
+
+鼠标移到这里&gt; [^哈喽]
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">^哈喽</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 注明框内显示的内容</span>
+</code></pre></div><blockquote><p>注：在部分线上预览未支持</p></blockquote> <p>鼠标移到这里&gt; <a href="%E6%B3%A8%E6%98%8E%E6%A1%86%E5%86%85%E6%98%BE%E7%A4%BA%E7%9A%84%E5%86%85%E5%AE%B9">^哈喽</a></p> <h2 id="六、列表"><a href="#六、列表" class="header-anchor">#</a> 六、列表</h2> <h3 id="无序列表"><a href="#无序列表" class="header-anchor">#</a> 无序列表</h3> <p>使用星号<code>*</code>、加号<code>+</code>或是减号<code>-</code>作为列表标记：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> 第一项
+<span class="token list punctuation">*</span> 第二项
+
+<span class="token list punctuation">+</span> 第一项
+<span class="token list punctuation">+</span> 第二项
+
+<span class="token list punctuation">-</span> 第一项
+<span class="token list punctuation">-</span> 第二项
+</code></pre></div><ul><li>第一项</li> <li>第二项</li></ul> <h3 id="有序列表"><a href="#有序列表" class="header-anchor">#</a> 有序列表</h3> <p>使用数字并加上<code>.</code> 号来表示</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> 第一项
+<span class="token list punctuation">2.</span> 第二项
+</code></pre></div><ol><li>第一项</li> <li>第二项</li></ol> <h3 id="折叠列表"><a href="#折叠列表" class="header-anchor">#</a> 折叠列表</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>summary</span><span class="token punctuation">&gt;</span></span>点我打开关闭折叠<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>summary</span><span class="token punctuation">&gt;</span></span>
+ 折叠内容
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>details</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><blockquote><p>注意：&lt;details&gt; 标签内写markdown代码无效，可写html代码，如ul&gt;li、table等</p></blockquote> <details><summary>点我打开关闭折叠</summary>
+ 折叠内容
+ <ul><li>1</li> <li>2</li> <li>3</li></ul></details> <details><summary>包含table的折叠</summary> <table><thead><tr><th align="center">分类</th> <th align="center">例词</th></tr></thead> <tbody><tr><td align="center">人称代词-主格</td> <td align="center">I我，you你，he他，she她，they他们， we我们</td></tr> <tr><td align="center">人称代词-宾格</td> <td align="center">me我， you你， him他， her她， them他们， us我们</td></tr> <tr><td align="center">物主代词</td> <td align="center">my我的， his他的， your你的（your你们的）， their他们的， hers她的</td></tr> <tr><td align="center">指示代词</td> <td align="center">this这， that那， these这些， those 那些</td></tr> <tr><td align="center">反身代词</td> <td align="center">myself我自己， himself他自己， themselves他们自己， yourself你(们)自己，herself她自己</td></tr> <tr><td align="center">疑问代词</td> <td align="center">who谁， what什么， which哪个</td></tr> <tr><td align="center">不定代词</td> <td align="center">some一些， many许多， both两个、两个都， any许多</td></tr> <tr><td align="center">关系代词</td> <td align="center">which……的物， who……的人， that……的人或物， who谁， that引导定语从句</td></tr> <tr><td align="center">相互代词</td> <td align="center">each other 互相， one another互相</td></tr> <tr><td align="center">连接代词</td> <td align="center">who,whom,whose,what,which,whatever,whichever,whoever,whomever</td></tr> <tr><td align="center">替代词</td> <td align="center">one（单数），ones（复数）</td></tr></tbody></table></details> <h3 id="带复选框列表"><a href="#带复选框列表" class="header-anchor">#</a> 带复选框列表</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> [x] 第一项
+<span class="token list punctuation">*</span> [ ] 第二项
+<span class="token list punctuation">*</span> [ ] 第三项
+</code></pre></div><blockquote><p>注：在部分线上预览未支持</p></blockquote> <ul><li><p>[x] 第一项</p></li> <li><p>[ ] 第二项</p></li> <li><p>[ ] 第三项</p></li></ul> <h3 id="列表嵌套"><a href="#列表嵌套" class="header-anchor">#</a> 列表嵌套</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> 第一项：
+    <span class="token list punctuation">-</span> 第一项嵌套的第一个元素
+    <span class="token list punctuation">-</span> 第一项嵌套的第二个元素
+<span class="token list punctuation">2.</span> 第二项：
+    <span class="token list punctuation">-</span> 第二项嵌套的第一个元素
+       <span class="token list punctuation">-</span> 第三层嵌套
+</code></pre></div><ol><li>第一项
+<ul><li>嵌套1</li> <li>嵌套2</li></ul></li> <li>第二项
+<ul><li>嵌套1
+<ul><li>嵌套2</li></ul></li></ul></li></ol> <h2 id="七、区块引用"><a href="#七、区块引用" class="header-anchor">#</a> 七、区块引用</h2> <p>区块引用是在段落开头使用 <code>&gt;</code>符号 ，然后后面紧跟一个<strong>空格</strong>符号：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token blockquote punctuation">&gt;</span> 区块引用
+</code></pre></div><blockquote><p>区块引用</p> <p>Typora中回车键自动延伸区块</p></blockquote> <h4 id="区块嵌套"><a href="#区块嵌套" class="header-anchor">#</a> 区块嵌套</h4> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token blockquote punctuation">&gt;</span> 第一层
+<span class="token blockquote punctuation">&gt; &gt;</span> 第二层
+<span class="token blockquote punctuation">&gt; &gt; &gt;</span> 第三层
+</code></pre></div><blockquote><p>第一层</p> <blockquote><p>第二层</p> <blockquote><p>第三层</p></blockquote></blockquote></blockquote> <h4 id="区块中使用列表"><a href="#区块中使用列表" class="header-anchor">#</a> 区块中使用列表</h4> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token blockquote punctuation">&gt;</span> 区块中使用列表
+<span class="token blockquote punctuation">&gt;</span> <span class="token list punctuation">1.</span> 第一项
+<span class="token blockquote punctuation">&gt;</span> <span class="token list punctuation">2.</span> 第二项
+<span class="token blockquote punctuation">&gt;</span> <span class="token list punctuation">*</span> 111
+<span class="token blockquote punctuation">&gt;</span> <span class="token list punctuation">*</span> 222
+</code></pre></div><blockquote><p>区块中使用列表</p> <ol><li>第一项</li> <li>第二项
+<ul><li>111</li> <li>222</li></ul></li></ol></blockquote> <h4 id="列表中使用区块"><a href="#列表中使用区块" class="header-anchor">#</a> 列表中使用区块</h4> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> 第一项
+    &gt; 区块
+<span class="token list punctuation">*</span> 第二项
+</code></pre></div><ul><li><p>第一项</p> <blockquote><p>区块</p> <p>区块</p></blockquote></li> <li><p>第二项</p></li></ul> <h2 id="八、代码"><a href="#八、代码" class="header-anchor">#</a> 八、代码</h2> <p>如果是段落上的一个代码片段可以用反引号把它包起来（<strong>`</strong>），示例：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token code-snippet code keyword">`alert()`</span>
+</code></pre></div><p><code>alert()</code></p> <h3 id="代码区块"><a href="#代码区块" class="header-anchor">#</a> 代码区块</h3> <p>用三个反引号 <strong>```</strong> 包裹一段代码，并指定一种语言（也可以不指定），指定代码语言后会有代码的颜色高亮</p> <p>本代码区块为示例说明：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>​```javascript
+function test() {
+	alert('test')
+}
+​```
+</code></pre></div><p>效果：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="九、链接"><a href="#九、链接" class="header-anchor">#</a> 九、链接</h2> <p>格式：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url">[<span class="token content">链接名称</span>](<span class="token url">链接地址</span>)</span>
+
+<span class="token url">[<span class="token content">链接名称</span>](<span class="token url">链接地址,可选的alt</span>)</span>
+
+或
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>链接地址</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>示例：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url">[<span class="token content">百度</span>](<span class="token url">http://www.baidu.com,'百度'</span>)</span>
+</code></pre></div><p><a href="http://www.baidu.com,'%E7%99%BE%E5%BA%A6'" target="_blank" rel="noopener noreferrer">百度<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>直接显示链接地址：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>&lt;http://www.baidu.com&gt;
+</code></pre></div><p><a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer">http://www.baidu.com<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="变量链接"><a href="#变量链接" class="header-anchor">#</a> 变量链接</h3> <p>链接可以用变量来代替，文档末尾或其他位置附带变量地址：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>这个链接用 1 作为网址变量 <span class="token url">[<span class="token content">Google</span>][<span class="token variable">1</span>]</span>
+这个链接用 baidu 作为网址变量 <span class="token url">[<span class="token content">Baidu</span>][<span class="token variable">baidu</span>]</span>
+
+然后在文档的结尾或其他位置给变量赋值（网址）
+  <span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> http://www.google.com/</span>
+  <span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">baidu</span><span class="token punctuation">]</span><span class="token punctuation">:</span> http://www.baidu.com/</span>
+</code></pre></div><p>这个链接用 1 作为网址变量 <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Google<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>这个链接用 baidu 作为网址变量 <a href="http://www.baidu.com/" target="_blank" rel="noopener noreferrer">Baidu<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="github仓库中使用内部链接"><a href="#github仓库中使用内部链接" class="header-anchor">#</a> Github仓库中使用内部链接</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>可使用相对路径（前提是有该路径下的文件）
+<span class="token url">[<span class="token content">test</span>](<span class="token url">test.md</span>)</span>
+</code></pre></div><p><a href="/blogs/docs/03.技术/01.技术文档/md-img/test.html">test</a></p> <h3 id="锚点链接"><a href="#锚点链接" class="header-anchor">#</a> 锚点链接</h3> <p>本文件中每一个标题都是一个锚点，和HTML的锚点（<code>#</code>）类似</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url">[<span class="token content">Markdown</span>](<span class="token url">#Markdown</span>)</span>
+</code></pre></div><blockquote><p>注： github对含有标点符号的标题进行锚点时会忽略掉标点符号，
+本页中，如果这样写则无法跳转：[链接](#九、链接)
+正确写法：[链接](#九链接)</p></blockquote> <p><a href="#%E4%B8%80Markdown">Markdown</a></p> <p><a href="#%E4%B9%9D%E9%93%BE%E6%8E%A5">链接</a></p> <p><a href="#%E6%B5%81%E7%A8%8B%E5%9B%BE">流程图</a></p> <h2 id="十、图片"><a href="#十、图片" class="header-anchor">#</a> 十、图片</h2> <p>和链接的区别是前面多一个感叹号<code>!</code></p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url"><span class="token operator">!</span>[<span class="token content">图片名</span>](<span class="token url">图片链接</span>)</span>
+</code></pre></div><p>当然，你也可以像链接那样对图片地址使用变量:</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>这里链接用 img 作为图片地址变量
+然后在文档的结尾或其他位置给变量赋值（图片地址）
+<span class="token url"><span class="token operator">!</span>[<span class="token content">RUNOOB</span>][<span class="token variable">img</span>]</span>
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">img</span><span class="token punctuation">]</span><span class="token punctuation">:</span> https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png</span>
+</code></pre></div><p><img src="https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png" alt="RUNOOB"></p> <h3 id="图片宽高"><a href="#图片宽高" class="header-anchor">#</a> 图片宽高</h3> <p>如下想设置图片宽高，可以使用 <code>&lt;img&gt;</code> 标签。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png<span class="token punctuation">&quot;</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>50px<span class="token punctuation">&quot;</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30px<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><img src="https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png" width="50px" height="30px"> <h3 id="相对路径以及github中使用图片"><a href="#相对路径以及github中使用图片" class="header-anchor">#</a> 相对路径以及Github中使用图片</h3> <p>不管是在本地还是在github同一个仓库中，如果图片存在，可以使用<strong>相对路径</strong>。</p> <p>相对路径图片：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url"><span class="token operator">!</span>[<span class="token content">头像图片</span>](<span class="token url">./md-img/test.jpg</span>)</span>
+</code></pre></div><p>github上如果引用其他github仓库中的图片则要注意地址格式：<code>仓库地址/raw/分支名/图片路径</code> 或 <code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片路径</code></p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url"><span class="token operator">!</span>[<span class="token content">其他仓库的图片1</span>](<span class="token url">https://github.com/xugaoyi/vue-music/raw/master/src/common/image/default.png</span>)</span>
+或
+<span class="token url"><span class="token operator">!</span>[<span class="token content">其他仓库的图片2</span>](<span class="token url">https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png</span>)</span>
+
+</code></pre></div><p><img src="https://github.com/xugaoyi/vue-music/raw/master/src/common/image/default.png" alt="其他仓库的图片"></p> <p><img src="https://raw.githubusercontent.com/xugaoyi/image_store/master/blog/md_logo.png" alt="其他仓库的图片2"></p> <h2 id="十一、表格"><a href="#十一、表格" class="header-anchor">#</a> 十一、表格</h2> <p>制作表格使用 <code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头和其他行。</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important">  表头   </span><span class="token punctuation">|</span><span class="token table-header important"> 表头  </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span>  <span class="token punctuation">----</span>  <span class="token punctuation">|</span> <span class="token punctuation">----</span>  <span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 单元格  </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data"> 单元格  </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span>
+</span></span></code></pre></div><table><thead><tr><th style="text-align:center;">表头</th> <th style="text-align:center;">表头</th></tr></thead> <tbody><tr><td style="text-align:center;">单元格</td> <td style="text-align:center;">单元格</td></tr> <tr><td style="text-align:center;">单元格</td> <td style="text-align:center;">单元格</td></tr></tbody></table> <p><strong>对齐方式</strong></p> <ul><li><strong>-:</strong> 设置内容和标题栏居右对齐</li> <li><strong>:-</strong> 设置内容和标题栏居左对齐</li> <li><strong>:-:</strong> 设置内容和标题栏居中对齐</li></ul> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 左对齐 </span><span class="token punctuation">|</span><span class="token table-header important"> 右对齐 </span><span class="token punctuation">|</span><span class="token table-header important"> 居中对齐 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span> <span class="token punctuation">:-----</span><span class="token punctuation">|</span> <span class="token punctuation">----:</span> <span class="token punctuation">|</span> <span class="token punctuation">:----:</span> <span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span>
+</span></span></code></pre></div><table><thead><tr><th style="text-align:left;">左对齐</th> <th style="text-align:right;">右对齐</th> <th style="text-align:center;">居中对齐</th></tr></thead> <tbody><tr><td style="text-align:left;">单元格</td> <td style="text-align:right;">单元格</td> <td style="text-align:center;">单元格</td></tr> <tr><td style="text-align:left;">单元格</td> <td style="text-align:right;">单元格</td> <td style="text-align:center;">单元格</td></tr></tbody></table> <h2 id="十二、emoji表情包"><a href="#十二、emoji表情包" class="header-anchor">#</a> 十二、Emoji表情包</h2> <p>Emoji表情英文名的前后加冒号，Typore上先输入冒号再输入首字母有表情提示</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>:smirk:
+</code></pre></div><p>💋
+😸🙈🐴
+😏😊😃😄 ☀️</p> <p>更多表情名称请查看：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener noreferrer">表情包清单<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="十三、其他技巧"><a href="#十三、其他技巧" class="header-anchor">#</a> 十三、其他技巧</h2> <h3 id="支持的-html-元素"><a href="#支持的-html-元素" class="header-anchor">#</a> 支持的 HTML 元素</h3> <p>不在 Markdown 语法涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p> <p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等等 ，如：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>使用 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">&gt;</span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">&gt;</span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">&gt;</span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">&gt;</span></span> 重启电脑
+</code></pre></div><p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p> <p><b>我是使用b标签的加粗字体</b></p> <h3 id="转义"><a href="#转义" class="header-anchor">#</a> 转义</h3> <p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用反斜杠转义字符：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token bold"><span class="token punctuation">**</span><span class="token content">未转义星号显示加粗</span><span class="token punctuation">**</span></span>
+\*\* 转义显示星号 \*\*
+</code></pre></div><p><strong>未转义星号显示加粗</strong>
+** 转义显示星号 **</p> <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>\   反斜线
+`   反引号
+<span class="token list punctuation">*</span>   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+<span class="token title important"><span class="token punctuation">#</span>   井字号</span>
+<span class="token list punctuation">+</span>   加号
+<span class="token list punctuation">-</span>   减号
+.   英文句点
+!   感叹号
+</code></pre></div><hr> <p>*** <strong>以下部分在Github或其他在线预览中暂未支持</strong> ***</p> <hr> <h3 id="数学公式"><a href="#数学公式" class="header-anchor">#</a> 数学公式</h3> <p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+$$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$
+</code></pre></div><p>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \
+\end{vmatrix}
+$$</p> <h3 id="图表"><a href="#图表" class="header-anchor">#</a> 图表</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>​```chart
+,Budget,Income,Expenses,Debt
+June,5000,8000,4000,6000
+July,3000,1000,4000,3000
+Aug,5000,7000,6000,3000
+Sep,7000,2000,3000,1000
+Oct,6000,5000,4000,2000
+Nov,4000,3000,5000,
+
+type: pie
+title: Monthly Revenue
+x.title: Amount
+y.title: Month
+y.suffix: $
+​```
+​```mermaid
+sequenceDiagram
+A-&gt;&gt;B: 是否已收到消息？
+B--&gt;&gt;A: 已收到消息
+​```
+</code></pre></div><blockquote><p>注：在Typora中未支持</p></blockquote> <h3 id="流程图"><a href="#流程图" class="header-anchor">#</a> 流程图</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>语法：
+​```mermaid
+graph TD
+A[模块A] --&gt;|A1| B(模块B)
+B --&gt; C{判断条件C}
+C --&gt;|条件C1| D[模块D]
+C --&gt;|条件C2| E[模块E]
+C --&gt;|条件C3| F[模块F]
+​```
+</code></pre></div><p>流程图相关文章：</p> <p><a href="https://www.jianshu.com/p/b421cc723da5" target="_blank" rel="noopener noreferrer">https://www.jianshu.com/p/b421cc723da5<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="http://www.imooc.com/article/292708" target="_blank" rel="noopener noreferrer">http://www.imooc.com/article/292708<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="时序图"><a href="#时序图" class="header-anchor">#</a> 时序图</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>​```mermaid
+sequenceDiagram
+A-&gt;&gt;B: 是否已收到消息？
+B--&gt;&gt;A: 已收到消息
+​```
+</code></pre></div><h3 id="甘特图"><a href="#甘特图" class="header-anchor">#</a> 甘特图</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>​```mermaid
+gantt
+title 甘特图
+dateFormat  YYYY-MM-DD
+section 项目A
+任务1           :a1, 2018-06-06, 30d
+任务2     :after a1  , 20d
+section 项目B
+任务3      :2018-06-12  , 12d
+任务4      : 24d
+​```
+</code></pre></div><p>​																														     									<a href="#markdown%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">回到顶部</a></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.dc354540.js" defer></script><script src="/assets/js/5.4a76941f.js" defer></script><script src="/assets/js/1.d393d5fa.js" defer></script><script src="/assets/js/67.520608e3.js" defer></script>
+  </body>
+</html>
